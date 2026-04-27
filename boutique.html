@@ -1,0 +1,105 @@
+<!doctype html>
+<html class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Migennes Subaquatique</title>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+</style>
+</head>
+<body class="flex flex-col w-full" id="topPage">
+    <!-- Header -->
+    <div id="header"></div>
+    <script>
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+            document.getElementById("header").innerHTML = data;
+
+            const burger = document.getElementById('burger');
+            const menu = document.getElementById('menu');
+            if (burger && menu) {
+                burger.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                });
+            }
+
+            // Détection page active
+            const links = document.querySelectorAll("nav a");
+            const currentPath = window.location.pathname;
+            links.forEach(link => {
+                if (link.getAttribute("href") === currentPath) {
+                link.classList.add("underline", "text-[#FF8B62]");
+
+                link.setAttribute("href", "#topPage");
+                }
+            });
+            });
+    </script>
+
+    <!-- Main -->
+    <main class="w-full flex flex-col gap-10 px-8 pt-[150px] pb-5 md:pt-[100px] bg-[#f3f3f3]">
+        <!-- Titre principal -->
+        <div class="bg-[#003262] p-4 rounded shadow-lg text-white text-center text-[min(4vw,3rem)] font-bold">
+            <h1>Boutique du club</h1>
+        </div>
+
+        <!-- Articles -->
+        <div class="flex flex-wrap gap-4 justify-center">
+            <div class="w-128 bg-gray-100 rounded-lg shadow-lg p-4">
+                <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=1000x10000:format=jpg/path/s6d486fb56e4e94d7/image/i1b54873552201d63/version/1736885318/image.jpg" class="rounded-lg mb-4">
+                <h3 class="text-xl font-bold mb-2">T-shirt</h3>
+                <p class="text-gray-700 font-bold">15 €</p>
+                <a href="https://www.helloasso.com/associations/migennes-subaquatique/paiements/t-shirt-mig-sub" target="_blank" class="inline-block mt-4 px-4 py-2 bg-[#003262] text-white rounded">Commander</a>
+            </div>
+            <div class="w-128 bg-gray-100 rounded-lg shadow-lg p-4">
+                <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=650x10000:format=jpg/path/s6d486fb56e4e94d7/image/ib6dc1bbec548fa15/version/1737396996/image.jpg" alt="Article 2" class="rounded-lg mb-4">
+                <h3 class="text-xl font-bold mb-2">Carnet de plongée</h3>
+                <p class="text-gray-700 font-bold">10 €</p>
+                <a href="https://www.helloasso.com/associations/migennes-subaquatique/paiements/carnet-de-plongee" target="_blank" class="inline-block mt-4 px-4 py-2 bg-[#003262] text-white rounded">Commander</a>
+            </div>
+        </div>
+
+        <!-- Retour haut de page -->
+        <div id="topPageButton"></div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                fetch("top-page-button.html")
+                    .then(response => response.text())
+                    .then(data => {
+                        const container = document.getElementById("topPageButton");
+                        container.innerHTML = data;
+
+                        const button = container.querySelector("div");
+
+                        window.addEventListener("scroll", function () {
+                            if (window.scrollY > 200) {
+                                button.classList.remove("opacity-0", "pointer-events-none");
+                                button.classList.add("opacity-85");
+                            } else {
+                                button.classList.remove("opacity-85");
+                                button.classList.add("opacity-0", "pointer-events-none");
+                            }
+                        });
+                    });
+            });
+        </script>
+    </main>
+
+    <!-- Banderolle -->
+    <div class=" shadow-lg bg-[#d9e4e8] py-5 px-4">
+        <ul class="flex items-center gap-2 justify-center">
+            <li class="hidden md:block"><a href="#topPage"><img src="https://image.jimcdn.com/app/cms/image/transf/dimension=371x10000:format=png/path/s6d486fb56e4e94d7/image/i58617c6ad28d4c1f/version/1737395830/image.png"></a></li>
+            <li><a href="https://www.salon-de-la-plongee.com/fr/accueil.html" target="_blank"><img class="h-64" src="https://image.jimcdn.com/app/cms/image/transf/dimension=250x10000:format=jpg/path/s6d486fb56e4e94d7/image/i1306eb17aec51f04/version/1761231516/image.jpg"></a></li>
+            <li><a href="https://www.sports.gouv.fr/signaler-une-violence-501" target="_blank"><img class="h-64" src="https://image.jimcdn.com/app/cms/image/transf/dimension=250x10000:format=jpg/path/s6d486fb56e4e94d7/image/i7a468b6f305439f4/version/1751204905/image.jpg"></a></li>
+        </ul>
+    </div>
+</body>
+</html>

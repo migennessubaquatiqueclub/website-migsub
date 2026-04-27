@@ -1,0 +1,77 @@
+<!doctype html>
+<html class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Migennes Subaquatique</title>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+</style>
+</head>
+<body class="flex flex-col w-full bg-[#d9e4e8]" id="topPage">
+    <!-- Main -->
+    <main class="w-full flex flex-col gap-10 px-8 pb-5 md:pt-[100px]">
+        <!-- Titre principal -->
+        <div class="flex flex-col items-center">
+            <img class="w-18" src="/images/logos/plongeur-bas.png">
+            <p class="text-5xl font-bold text-[#003262]">Adhésion</p>
+            <p class="text-gray-500 text-center font-semibold">Rejoignez le club Migennes Subaquatique pour la saison en cours.</p>
+        </div>
+
+        <!-- Formulaire baptmême -->
+        <div>
+            <form class="flex flex-col items-center gap-5 shadow-xl rounded-xl px-4 py-4 bg-[#f6f6f6]">
+                <div class="w-full flex justify-around items-center text-center">
+                    <p class="flex justify-center items-center bg-gray-200 text-gray-500 text-xl font-semibold rounded-full w-10 h-10">1</p>
+                    <p class="flex justify-center items-center bg-gray-200 text-gray-500 text-xl font-semibold rounded-full w-10 h-10">2</p>
+                    <p class="flex justify-center items-center bg-[#FF8B62] text-white text-xl font-semibold rounded-full w-10 h-10">3</p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <img class="w-6 h-5" src="/images/logos/user.png">
+                    <p class="font-medium text-2xl">Vos informations</p>
+                </div>
+                <div class="flex gap-4">
+                    <div class="w-full">
+                        <label class="font-medium text-gray-500">PRÉNOM *</label>
+                        <input class="placeholder:text-gray-700 w-full bg-gray-200 rounded-lg px-4 py-2 border border-gray-400" type="text" placeholder="Jacques" required>
+                    </div>
+                    <div class="w-full">
+                        <label class="font-medium text-gray-500">NOM *</label>
+                        <input class="placeholder:text-gray-700 w-full bg-gray-200 rounded-lg px-4 py-2 border border-gray-400" type="text" placeholder="Cousteau" required>
+                    </div>
+                </div>
+                <div class="w-full">
+                    <label class="font-medium text-gray-500">DATE DE NAISSANCE *</label>
+                    <input class="placeholder:text-gray-700 w-full bg-gray-200 rounded-lg px-4 py-2 border border-gray-400" type="date" min="1940-01-01" required>
+                </div>
+                <div class="w-full">
+                    <label class="font-medium text-gray-500">EMAIL *</label>
+                    <input class="placeholder:text-gray-700 w-full bg-gray-200 rounded-lg px-4 py-2 border border-gray-400" type="email" placeholder="jacques@ocean.fr" required>
+                </div>
+                <div class="w-full">
+                    <label class="font-medium text-gray-500">ADRESSE *</label>
+                    <input class="placeholder:text-gray-700 w-full bg-gray-200 rounded-lg px-4 py-2 border border-gray-400" type="text" placeholder="12 Rue Lauzet Ainé, 83110 Sanary-sur-Mer" required>
+                </div>
+                <div class="w-full">
+                    <label class="font-medium text-gray-500">NUMÉRO DE TÉLÉPHONE *</label>
+                    <input class="placeholder:text-gray-700 w-full bg-gray-200 rounded-lg px-4 py-2 border border-gray-400" type="tel" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" placeholder="06 12 34 56 78" required>
+                </div>
+                <div class="w-full flex justify-around items-center">
+                    <div class="flex items-center">
+                        <img class="h-5" src="https://img.icons8.com/?size=100&id=7811&format=png&color=000000">
+                        <a href="adhesion-form-2.html">Retour</a>
+                    </div>
+                    <!-- <button class="bg-[#003262] text-white py-2 w-32 rounded-md" type="submit">CONFIRMER</button> -->
+                    <a class="flex justify-center items-center bg-[#003262] text-white py-2 px-2 rounded-md text-center" href="adhesion.html">CONFIRMER<img class="h-5" src="https://img.icons8.com/?size=100&id=7789&format=png&color=ffffff"></a>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
