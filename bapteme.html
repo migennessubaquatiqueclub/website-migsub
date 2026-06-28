@@ -51,7 +51,7 @@
             <h1>S'inscrire à un baptême de plongée</h1>
         </div>
 
-        <!-- Formulaire baptmême -->
+        <!-- Formulaire baptême -->
         <div>
             <form class="flex flex-col items-center gap-5 shadow-xl rounded-xl px-4 py-4 bg-[#f6f6f6] border-l-6 border-[#FF8B62]" name="baptême" netlify>
                 <div class="flex items-center gap-2">
@@ -79,6 +79,8 @@
                 <button class="bg-[#003262] text-white py-2 px-2 rounded-md" type="submit">CONFIRMER</button>
             </form>
         </div>
+
+        <a class="flex flex-col items-center bg-[#003262] rounded-lg p-0" href="https://www.google.fr/maps/dir//Piscine+Luc+Berton,+23+Av.+de+l'Europe,+89400+Migennes/@47.9663292,3.5181934,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47ee541865f24f47:0x516335b539b630c1!2m2!1d3.5207683!2d47.9663256!3e0?entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank"><img class="rounded-t-lg" src="images/piscine.png"><p class="text-lg text-white font-semibold py-1">Voir l'itinéraire</p></a>
 
         <!-- Moniteurs -->
         <div>
@@ -154,13 +156,14 @@
         </script>
     </main>
 
-    <!-- Banderolle -->
-    <div class=" shadow-lg bg-[#d9e4e8] py-5 px-4">
-        <ul class="flex items-center gap-2 justify-center">
-            <li class="hidden md:block"><a href="#topPage"><img src="https://image.jimcdn.com/app/cms/image/transf/dimension=371x10000:format=png/path/s6d486fb56e4e94d7/image/i58617c6ad28d4c1f/version/1737395830/image.png"></a></li>
-            <li><a href="https://www.salon-de-la-plongee.com/fr/accueil.html" target="_blank"><img class="h-64" src="https://image.jimcdn.com/app/cms/image/transf/dimension=250x10000:format=jpg/path/s6d486fb56e4e94d7/image/i1306eb17aec51f04/version/1761231516/image.jpg"></a></li>
-            <li><a href="https://www.sports.gouv.fr/signaler-une-violence-501" target="_blank"><img class="h-64" src="https://image.jimcdn.com/app/cms/image/transf/dimension=250x10000:format=jpg/path/s6d486fb56e4e94d7/image/i7a468b6f305439f4/version/1751204905/image.jpg"></a></li>
-        </ul>
-    </div>
+    <!-- Footer -->
+    <div id="footer"></div>
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+            document.getElementById("footer").innerHTML = data;
+            });
+    </script>
 </body>
 </html>

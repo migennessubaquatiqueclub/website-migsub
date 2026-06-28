@@ -93,13 +93,14 @@
         </script>
     </main>
 
-    <!-- Banderolle -->
-    <div class=" shadow-lg bg-[#d9e4e8] py-5 px-4">
-        <ul class="flex items-center gap-2 justify-center">
-            <li class="hidden md:block"><a href="#topPage"><img src="https://image.jimcdn.com/app/cms/image/transf/dimension=371x10000:format=png/path/s6d486fb56e4e94d7/image/i58617c6ad28d4c1f/version/1737395830/image.png"></a></li>
-            <li><a href="https://www.salon-de-la-plongee.com/fr/accueil.html" target="_blank"><img class="h-64" src="https://image.jimcdn.com/app/cms/image/transf/dimension=250x10000:format=jpg/path/s6d486fb56e4e94d7/image/i1306eb17aec51f04/version/1761231516/image.jpg"></a></li>
-            <li><a href="https://www.sports.gouv.fr/signaler-une-violence-501" target="_blank"><img class="h-64" src="https://image.jimcdn.com/app/cms/image/transf/dimension=250x10000:format=jpg/path/s6d486fb56e4e94d7/image/i7a468b6f305439f4/version/1751204905/image.jpg"></a></li>
-        </ul>
-    </div>
+    <!-- Footer -->
+    <div id="footer"></div>
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+            document.getElementById("footer").innerHTML = data;
+            });
+    </script>
 </body>
 </html>
