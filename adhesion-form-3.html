@@ -27,7 +27,8 @@
 
         <!-- Formulaire Adhésion 3/3 -->
         <div>
-            <form class="flex flex-col items-center gap-5 shadow-xl rounded-xl px-4 py-4 bg-[#f6f6f6]" name="adhesion" netlify action="adhesion.html">
+            <form class="flex flex-col items-center gap-5 shadow-xl rounded-xl px-4 py-4 bg-[#f6f6f6]" name="adhesion" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="adhesion">
                 <div class="w-full flex justify-around items-center text-center">
                     <p class="flex justify-center items-center bg-gray-200 text-gray-500 text-xl font-semibold rounded-full w-10 h-10">1</p>
                     <p class="flex justify-center items-center bg-gray-200 text-gray-500 text-xl font-semibold rounded-full w-10 h-10">2</p>
