@@ -1,4 +1,11 @@
 * faire format ordi
+"voir le planning" doit etre centré
+actu
+ajouter logo dans header
+
+
+
+
 * mettre migennes.subaquatique@gmail.com dans netlify
 
 

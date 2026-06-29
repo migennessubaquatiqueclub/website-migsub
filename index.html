@@ -14,7 +14,7 @@
     }
 </style>
 </head>
-<body class="flex flex-col w-full" id="topPage">
+<body class="flex flex-col w-full bg-[#f3f3f3]" id="topPage">
     <!-- Header -->
     <div id="header"></div>
     <script>
@@ -45,17 +45,17 @@
     </script>
 
     <!-- Main -->
-    <main class="w-full flex flex-col gap-10 px-8 pt-[150px] pb-5 md:pt-[100px] bg-[#f3f3f3]">
+    <main class="w-full flex flex-col gap-10 px-8 pt-[150px] pb-5 md:pt-[155px] md:w-[85%] md:self-center bg-[#f3f3f3]">
         <!-- Titre principal -->
-        <div class="bg-[#003262] pt-4 pb-1 px-4 rounded shadow-lg text-white text-center text-xl font-bold flex flex-col gap-3">
+        <div class="bg-[#003262] pt-4 pb-1 px-4 rounded shadow-lg text-white text-center text-xl md:text-3xl font-bold flex flex-col gap-3">
             <p class="mb-4">Bienvenue chez Migennes Subaquatique<br>Club de plongée sous-marine</p>
             <div class="flex justify-around items-center">
-                <div class="flex flex-col gap-2">
-                    <a href="/bapteme.html" class="text-sm font-light bg-[#5AF8FB] text-[#003262] py-2 w-45 rounded-md">Découvrir la plongée</a>
-                    <a href="#planning" class="text-sm font-light text-[#5AF8FB] border py-2 w-45 rounded-md">Voir le planning</a>
+                <div class="flex flex-col items-center md:flex-row gap-2 md:gap-5">
+                    <a href="/bapteme.html" class="text-sm md:text-lg font-light bg-[#5AF8FB] text-[#003262] py-2 w-45 rounded-md">Découvrir la plongée</a>
+                    <a href="#planning" class="text-sm md:text-lg font-light text-[#5AF8FB] border py-2 w-45 rounded-md">Voir le planning</a>
                 </div>
                 <div>
-                    <img class="w-30" src="/images/logos/plongeur-droite.png">
+                    <img class="w-30 md:w-40" src="/images/logos/plongeur-droite.png">
                 </div>
             </div>
         </div>
@@ -64,18 +64,18 @@
         <div class="flex flex-col gap-2">
             <h2 class="text-3xl font-bold text-[#003262] mb-3">Actualités du club</h2>
             <div class="bg-[#003262] rounded-lg">
-                <img class="w-full rounded-t-lg" src="https://th.bing.com/th/id/OIP.JKbMxCzG_VMXRFbX49_0FgHaEN?w=282&h=180&c=7&r=0&o=7&pid=1.7&rm=3">
+                <img class="w-full rounded-t-lg" src="images/piscine.png">
                 <p class="py-2 px-3 text-2xl text-[#FF8B62] font-bold text-center">Réouverture de la piscine</p>
-                <p class="pb-3 px-3 text-sm text-gray-200 text-center">Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus.</p>
+                <p class="pb-3 px-3 text-sm text-gray-200 text-center">Après plusieurs mois de rénovation, la piscine municipale de Migennes a rouvert ses portes.</p>
             </div>
             <div class="flex gap-2">
-                <div class="bg-[#003262] rounded-lg flex flex-col justify-center">
-                    <p class="py-2 px-3 text-lg text-[#FF8B62] font-bold text-center">Actualité 1</p>
-                    <p class="pb-3 px-3 text-sm text-gray-200 text-center">Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus.</p>
+                <div class="bg-[#003262] rounded-lg flex flex-col justify-start">
+                    <p class="py-2 px-3 text-lg text-[#FF8B62] font-bold text-center">Migennes Plage</p>
+                    <p class="pb-3 px-3 text-sm text-gray-200 text-center">Le club Migennes Subaquatique sera présent à Migennes Plage le samedi 11 juillet et le samedi 8 août.</p>
                 </div>
-                <div class="bg-[#003262] rounded-lg flex flex-col justify-center">
-                    <p class="py-2 px-3 text-lg text-[#FF8B62] font-bold text-center">Actualité 2</p>
-                    <p class="pb-3 px-3 text-sm text-gray-200 text-center">Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus.</p>
+                <div class="bg-[#003262] rounded-lg flex flex-col justify-start">
+                    <p class="py-2 px-3 text-lg text-[#FF8B62] font-bold text-center">Inscriptions 2026/2027</p>
+                    <p class="pb-3 px-3 text-sm text-gray-200 text-center">Les inscriptions pour la saison 2026/2027 sont ouvertes et se font depuis la page <a href="adhesion.html" class="border-b-1">"Adhésion"</a> du site internet.</p>
                 </div>
             </div>
         </div>
@@ -138,13 +138,13 @@
         </div>
 
         <!-- Espece de la semaine -->
-        <div id="planning" class="bg-[#003262] rounded-lg shadow-lg flex">
+        <div class="bg-[#003262] rounded-lg shadow-lg flex md:w-100 md:self-center">
             <div class="w-2/5 px-4 text-sm text-center flex flex-col justify-center items-center gap-4">
                 <p class="font-bold text-lg text-white">Espèce de la semaine</p>
                 <a class="text-sm font-light text-[#5AF8FB] border py-2 w-28 rounded-md" href="https://doris.ffessm.fr/Especes/Amphiprion-bicinctus-Poisson-clown-a-deux-bandes-1001" target="_blank">En savoir plus</a>
             </div>
             <div class="w-3/5">
-                <img class="object-cover rounded-r-lg" src="https://th.bing.com/th/id/OIP.b-fz5PrWAv-HJ6Jkv1LtHgHaHa?w=223&h=220&c=7&r=0&o=7&pid=1.7&rm=3">
+                <img class="object-cover rounded-r-lg pl-5" src="https://th.bing.com/th/id/OIP.b-fz5PrWAv-HJ6Jkv1LtHgHaHa?w=223&h=220&c=7&r=0&o=7&pid=1.7&rm=3">
             </div>
         </div>
 
