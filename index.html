@@ -1,188 +1,172 @@
 <!doctype html>
-<html class="scroll-smooth">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="google-site-verification" content="F6zcSxOaLlo3qMVEvEFfZsLhAJdQYH24ORdMV4krJOM" />
-<title>Migennes Subaquatique</title>
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<style>
-    body {
-        font-family: 'Poppins', sans-serif;
-    }
-</style>
-</head>
-<body class="flex flex-col w-full bg-[#f3f3f3]" id="topPage">
-    <!-- Header -->
-    <div id="header"></div>
-    <script>
-        fetch("header.html")
-            .then(response => response.text())
-            .then(data => {
-            document.getElementById("header").innerHTML = data;
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Migennes Subaquatique</title>
+        <meta name="description" content="Découvrez Migennes Subaquatique, le club de plongée de Migennes : actualités, planning, baptêmes et inscriptions." />
+        <link rel="shortcut icon" href="https://img.icons8.com/?size=100&id=cSBMHDeqDYbh&format=png&color=22C3E6" type="image/x-icon">
+        <link rel="preload" as="image" type="image/avif" imagesrcset="/.netlify/images?url=/images/actualites/piscine.png&amp;fm=avif&amp;w=320 320w, /.netlify/images?url=/images/actualites/piscine.png&amp;fm=avif&amp;w=640 640w, /.netlify/images?url=/images/actualites/piscine.png&amp;fm=avif&amp;w=960 960w, /.netlify/images?url=/images/actualites/piscine.png&amp;fm=avif&amp;w=1280 1280w, /.netlify/images?url=/images/actualites/piscine.png&amp;fm=avif&amp;w=1600 1600w, /.netlify/images?url=/images/actualites/piscine.png&amp;fm=avif&amp;w=2048 2048w" imagesizes="95vw" fetchpriority="high">
+        <script src="import-header-footer.js" defer></script>
+        <script src="image-fallback.js" defer></script>
+        <script src="menu-burger.js" defer></script>
+        <script src="top-page-button.js" defer></script>
+        <link rel="stylesheet" href="site.css">
+        <noscript><link rel="stylesheet" href="site.css"></noscript>
+        <link rel="stylesheet" href="header.css">
+        <noscript><link rel="stylesheet" href="header.css"></noscript>
+        <link rel="stylesheet" href="index.css">
+        <noscript><link rel="stylesheet" href="index.css"></noscript>
+        <link rel="stylesheet" href="top-page-button.css">
+        <noscript><link rel="stylesheet" href="top-page-button.css"></noscript>
+        <link rel="stylesheet" href="footer.css">
+        <noscript><link rel="stylesheet" href="footer.css"></noscript>
+    </head>
+    <body id="top-page">
+        <!-- Header -->
+        <header class="header" id="header"></header>
 
-            const burger = document.getElementById('burger');
-            const menu = document.getElementById('menu');
-            if (burger && menu) {
-                burger.addEventListener('click', () => {
-                menu.classList.toggle('hidden');
-                });
-            }
+        <!-- Main -->
+        <main>
+            <!-- Titre principal -->
+            <section class="hero">
+                <div class="page-heading">
+                    <div class="title">
+                        <span>Bienvenue chez</span>
+                        <h1>Migennes Subaquatique</h1>
+                        <span>Club de plongée sous-marine</span>
+                    </div>
+                </div>
+                <div class="links">
+                    <a class="link" href="./bapteme.html">Découvrir la plongée</a>
+                    <a class="link" href="#scroll-planning">Voir le planning</a>
+                </div>
+            </section>
 
-            // Détection page active
-            const links = document.querySelectorAll("nav a");
-            const currentPath = window.location.pathname;
-            links.forEach(link => {
-                if (link.getAttribute("href") === currentPath) {
-                link.classList.add("underline", "text-[#FF8B62]");
+            <!-- Actualités -->
+            <section class="actualites">
+                <h2>Actualités du club</h2>
+                <div class="list">
+                    <div class="actu">
+                        <picture>
+                            <source type="image/avif" srcset="/.netlify/images?url=/images/actualites/piscine.png&amp;fm=avif&amp;w=320 320w, /.netlify/images?url=/images/actualites/piscine.png&amp;fm=avif&amp;w=640 640w, /.netlify/images?url=/images/actualites/piscine.png&amp;fm=avif&amp;w=960 960w, /.netlify/images?url=/images/actualites/piscine.png&amp;fm=avif&amp;w=1280 1280w, /.netlify/images?url=/images/actualites/piscine.png&amp;fm=avif&amp;w=1600 1600w, /.netlify/images?url=/images/actualites/piscine.png&amp;fm=avif&amp;w=2048 2048w" sizes="95vw">
+                            <img src="/images/actualites/piscine.png" srcset="/.netlify/images?url=/images/actualites/piscine.png&amp;w=320 320w, /.netlify/images?url=/images/actualites/piscine.png&amp;w=640 640w, /.netlify/images?url=/images/actualites/piscine.png&amp;w=960 960w, /.netlify/images?url=/images/actualites/piscine.png&amp;w=1280 1280w, /.netlify/images?url=/images/actualites/piscine.png&amp;w=1600 1600w, /.netlify/images?url=/images/actualites/piscine.png&amp;w=2048 2048w" sizes="95vw" width="2048" height="1152" alt="Piscine de Migennes" loading="eager" fetchpriority="high" decoding="async">
+                        </picture>
+                        <h3>Soirée de Noël</h3>
+                        <p>Rendez-vous le samedi 12 décembre 2026 pour le repas de fin d'année.</p>
+                    </div>
+                    <span></span>
+                    <div class="actu">
+                        <!-- <img src="" alt=""> -->
+                        <h3>Inscriptions : Sortie à la fosse de Dijon</h3>
+                        <p>Les inscriptions sont ouvertes pour les sorties à la fosse de Dijon le samedi 23 janvier 2027 et le samedi 27 février 2027.<br><a href="./adhesion.html">S'inscrire</a></p>
+                    </div>
+                    <span></span>
+                    <div class="actu" id="scroll-planning">
+                        <!-- <img src="" alt=""> -->
+                        <h3>Inscriptions 2026/2027</h3>
+                        <p>Les inscriptions pour la saison 2026/2027 sont ouvertes.<br><a href="./adhesion.html">Prendre une adhésion</a></p>
+                    </div>
+                </div>
+            </section>
 
-                link.setAttribute("href", "#topPage");
-                }
-            });
-            });
-    </script>
+            <!-- Planning -->
+            <section class="planning">
+                <div class="top">
+                    <h2>Planning du club</h2>
+                    <a href="./adhesion.html">S'inscrire</a>
+                </div>
+                <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FParis&showPrint=0&mode=AGENDA&showTz=0&showCalendars=0&showTabs=0&showDate=0&showNav=0&showTitle=0&src=bWlnZW5uZXMuc3ViYXF1YXRpcXVlQGdtYWlsLmNvbQ&color=%239e69af" style="border-width:0" width="100%" height="300" frameborder="0" scrolling="no" title="Planning de Migennes Subaquatique" loading="lazy"></iframe>
+            </section>
 
-    <!-- Main -->
-    <main class="w-full flex flex-col gap-10 px-8 pt-[150px] pb-5 md:pt-[155px] md:w-[85%] md:self-center bg-[#f3f3f3]">
-        <!-- Titre principal -->
-        <div class="bg-[#003262] pt-4 pb-1 px-4 rounded shadow-lg text-white text-center text-xl md:text-3xl font-bold flex flex-col gap-3">
-            <p class="mb-4">Bienvenue chez Migennes Subaquatique<br>Club de plongée sous-marine</p>
-            <div class="flex justify-around items-center">
-                <div class="flex flex-col items-center md:flex-row gap-2 md:gap-5">
-                    <a href="/bapteme.html" class="text-sm md:text-lg font-light bg-[#5AF8FB] text-[#003262] py-2 w-45 rounded-md">Découvrir la plongée</a>
-                    <a href="#planning" class="text-sm md:text-lg font-light text-[#5AF8FB] border py-2 w-45 rounded-md">Voir le planning</a>
+            <!-- Moniteurs -->
+            <section class="moniteurs">
+                <h2>Les Moniteurs</h2>
+                <p>L'équipe de moniteurs qualifiés et passionnés qui accompagnent nos adhérants dans leur pratique de la plongée.</p>
+                <ul class="list">
+                    <li class="moniteur">
+                        <picture>
+                            <source type="image/avif" srcset="/.netlify/images?url=/images/persons/elyes.jpeg&amp;fm=avif&amp;w=100 100w, /.netlify/images?url=/images/persons/elyes.jpeg&amp;fm=avif&amp;w=200 200w, /.netlify/images?url=/images/persons/elyes.jpeg&amp;fm=avif&amp;w=300 300w" sizes="100px">
+                            <img src="/images/persons/elyes.jpeg" srcset="/.netlify/images?url=/images/persons/elyes.jpeg&amp;w=100 100w, /.netlify/images?url=/images/persons/elyes.jpeg&amp;w=200 200w, /.netlify/images?url=/images/persons/elyes.jpeg&amp;w=300 300w" sizes="100px" width="874" height="874" alt="Un moniteur de plongée de Migennes Subaquatique" loading="lazy" decoding="async">
+                        </picture>
+                        <h3>Elyes</h3>
+                        <p>E4 MF2</p>
+                    </li>
+                    <li class="moniteur">
+                        <picture>
+                            <source type="image/avif" srcset="/.netlify/images?url=/images/persons/sebastien.jpeg&amp;fm=avif&amp;w=100 100w, /.netlify/images?url=/images/persons/sebastien.jpeg&amp;fm=avif&amp;w=200 200w, /.netlify/images?url=/images/persons/sebastien.jpeg&amp;fm=avif&amp;w=300 300w" sizes="100px">
+                            <img src="/images/persons/sebastien.jpeg" srcset="/.netlify/images?url=/images/persons/sebastien.jpeg&amp;w=100 100w, /.netlify/images?url=/images/persons/sebastien.jpeg&amp;w=200 200w, /.netlify/images?url=/images/persons/sebastien.jpeg&amp;w=300 300w" sizes="100px" width="719" height="719" alt="Un moniteur de plongée de Migennes Subaquatique" loading="lazy" decoding="async">
+                        </picture>
+                        <h3>Sébastien</h3>
+                        <p>E2 EH1</p>
+                    </li>
+                    <li class="moniteur">
+                        <picture>
+                            <source type="image/avif" srcset="/.netlify/images?url=/images/persons/laurent.jpeg&amp;fm=avif&amp;w=100 100w, /.netlify/images?url=/images/persons/laurent.jpeg&amp;fm=avif&amp;w=200 200w, /.netlify/images?url=/images/persons/laurent.jpeg&amp;fm=avif&amp;w=300 300w" sizes="100px">
+                            <img src="/images/persons/laurent.jpeg" srcset="/.netlify/images?url=/images/persons/laurent.jpeg&amp;w=100 100w, /.netlify/images?url=/images/persons/laurent.jpeg&amp;w=200 200w, /.netlify/images?url=/images/persons/laurent.jpeg&amp;w=300 300w" sizes="100px" width="822" height="822" alt="Un moniteur de plongée de Migennes Subaquatique" loading="lazy" decoding="async">
+                        </picture>
+                        <h3>Laurent</h3>
+                        <p>E2 N5</p>
+                    </li>
+                    <li class="moniteur">
+                        <picture>
+                            <source type="image/avif" srcset="/.netlify/images?url=/images/persons/thierry.jpeg&amp;fm=avif&amp;w=100 100w, /.netlify/images?url=/images/persons/thierry.jpeg&amp;fm=avif&amp;w=200 200w, /.netlify/images?url=/images/persons/thierry.jpeg&amp;fm=avif&amp;w=300 300w" sizes="100px">
+                            <img src="/images/persons/thierry.jpeg" srcset="/.netlify/images?url=/images/persons/thierry.jpeg&amp;w=100 100w, /.netlify/images?url=/images/persons/thierry.jpeg&amp;w=200 200w, /.netlify/images?url=/images/persons/thierry.jpeg&amp;w=300 300w" sizes="100px" width="826" height="826" alt="Un moniteur de plongée de Migennes Subaquatique" loading="lazy" decoding="async">
+                        </picture>
+                        <h3>Thierry</h3>
+                        <p>E2</p>
+                    </li>
+                    <li class="moniteur">
+                        <picture>
+                            <source type="image/avif" srcset="/.netlify/images?url=/images/persons/philippe.jpeg&amp;fm=avif&amp;w=100 100w, /.netlify/images?url=/images/persons/philippe.jpeg&amp;fm=avif&amp;w=200 200w, /.netlify/images?url=/images/persons/philippe.jpeg&amp;fm=avif&amp;w=300 300w" sizes="100px">
+                            <img src="/images/persons/philippe.jpeg" srcset="/.netlify/images?url=/images/persons/philippe.jpeg&amp;w=100 100w, /.netlify/images?url=/images/persons/philippe.jpeg&amp;w=200 200w, /.netlify/images?url=/images/persons/philippe.jpeg&amp;w=300 300w" sizes="100px" width="750" height="750" alt="Un moniteur de plongée de Migennes Subaquatique" loading="lazy" decoding="async">
+                        </picture>
+                        <h3>Philippe</h3>
+                        <p>E1 EH1</p>
+                    </li>
+                    <li class="moniteur">
+                        <picture>
+                            <source type="image/avif" srcset="/.netlify/images?url=/images/persons/marcelino.jpeg&amp;fm=avif&amp;w=100 100w, /.netlify/images?url=/images/persons/marcelino.jpeg&amp;fm=avif&amp;w=200 200w, /.netlify/images?url=/images/persons/marcelino.jpeg&amp;fm=avif&amp;w=300 300w" sizes="100px">
+                            <img src="/images/persons/marcelino.jpeg" srcset="/.netlify/images?url=/images/persons/marcelino.jpeg&amp;w=100 100w, /.netlify/images?url=/images/persons/marcelino.jpeg&amp;w=200 200w, /.netlify/images?url=/images/persons/marcelino.jpeg&amp;w=300 300w" sizes="100px" width="379" height="379" alt="Un moniteur de plongée de Migennes Subaquatique" loading="lazy" decoding="async">
+                        </picture>
+                        <h3>Marcelino</h3>
+                        <p>E1 EH1</p>
+                    </li>
+                    <li class="moniteur">
+                        <picture>
+                            <source type="image/avif" srcset="/.netlify/images?url=/images/persons/manon.jpeg&amp;fm=avif&amp;w=100 100w, /.netlify/images?url=/images/persons/manon.jpeg&amp;fm=avif&amp;w=200 200w, /.netlify/images?url=/images/persons/manon.jpeg&amp;fm=avif&amp;w=300 300w" sizes="100px">
+                            <img src="/images/persons/manon.jpeg" srcset="/.netlify/images?url=/images/persons/manon.jpeg&amp;w=100 100w, /.netlify/images?url=/images/persons/manon.jpeg&amp;w=200 200w, /.netlify/images?url=/images/persons/manon.jpeg&amp;w=300 300w" sizes="100px" width="768" height="789" alt="Un moniteur de plongée de Migennes Subaquatique" loading="lazy" decoding="async">
+                        </picture>
+                        <h3>Manon</h3>
+                        <p>E1 ANTEOR</p>
+                    </li>
+                    <li class="moniteur">
+                        <picture>
+                            <source type="image/avif" srcset="/.netlify/images?url=/images/persons/christian.jpeg&amp;fm=avif&amp;w=100 100w, /.netlify/images?url=/images/persons/christian.jpeg&amp;fm=avif&amp;w=200 200w, /.netlify/images?url=/images/persons/christian.jpeg&amp;fm=avif&amp;w=300 300w" sizes="100px">
+                            <img src="/images/persons/christian.jpeg" srcset="/.netlify/images?url=/images/persons/christian.jpeg&amp;w=100 100w, /.netlify/images?url=/images/persons/christian.jpeg&amp;w=200 200w, /.netlify/images?url=/images/persons/christian.jpeg&amp;w=300 300w" sizes="100px" width="1459" height="1459" alt="Un moniteur de plongée de Migennes Subaquatique" loading="lazy" decoding="async">
+                        </picture>
+                        <h3>Christian</h3>
+                        <p>E1</p>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Espece de la semaine -->
+            <!-- <section>
+                <div>
+                    <p>Espèce de la semaine</p>
+                    <a href="https://doris.ffessm.fr/Especes/Amphiprion-bicinctus-Poisson-clown-a-deux-bandes-1001" target="_blank">En savoir plus</a>
                 </div>
                 <div>
-                    <img class="w-30 md:w-40" src="/images/logos/plongeur-droite.png">
+                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.Pa6z04honf6Z7FYYnM6OggAAAA%3Fr%3D0%26pid%3DApi&f=1&ipt=54b06dd930efefdefec935325828d14cd4240561e1c3016a68261fd372f75f3c&ipo=images">
                 </div>
-            </div>
-        </div>
-        
-        <!-- Actualités -->
-        <div class="flex flex-col gap-2">
-            <h2 class="text-3xl font-bold text-[#003262] mb-3">Actualités du club</h2>
-            <div class="bg-[#003262] rounded-lg">
-                <img class="w-full rounded-t-lg" src="images/piscine.png">
-                <p class="py-2 px-3 text-2xl text-[#FF8B62] font-bold text-center">Assemblée générale</p>
-                <p class="pb-3 px-3 text-sm text-gray-200 text-center">Rendez-vous le vendredi 06 novembre à 20h00 à la piscine de Migennes.</p>
-            </div>
-            <div class="flex gap-2">
-                <div class="bg-[#003262] rounded-lg flex flex-col justify-start">
-                    <p class="py-2 px-3 text-lg text-[#FF8B62] font-bold text-center">Inscriptions : Sortie à la fosse de Dijon</p>
-                    <p class="pb-3 px-3 text-sm text-gray-200 text-center">Les inscriptions sont ouvertes pour la sortie à la fosse de Dijon. <a href="agenda.html" class="border-b-1 text-[#FF8B62]">S'inscrire</a></p>
-                </div>
-                <div class="bg-[#003262] rounded-lg flex flex-col justify-start">
-                    <p class="py-2 px-3 text-lg text-[#FF8B62] font-bold text-center">Inscriptions 2026/2027</p>
-                    <p class="pb-3 px-3 text-sm text-gray-200 text-center">Les inscriptions pour la saison 2026/2027 sont ouvertes et se font depuis la page <a href="adhesion.html" class="border-b-1 text-[#FF8B62]">"Adhésion"</a> du site internet.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Planning -->
-        <div>
-            <div class="flex justify-between items-center mb-4">
-                <h2 class="text-3xl font-bold text-[#003262] mb-3">Planning du club</h2>
-                <a href="/agenda.html" class="bg-[#003262] text-white text-2xl mb-3 py-1 px-3 rounded-lg hover:bg-[#005a9e]">+</a>
-            </div>
-            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FParis&showPrint=0&mode=AGENDA&showTz=0&showCalendars=0&showTabs=0&showDate=0&showNav=0&showTitle=0&src=bWlnZW5uZXMuc3ViYXF1YXRpcXVlQGdtYWlsLmNvbQ&color=%239e69af" style="border-width:0" width="100%" height="300" frameborder="0" scrolling="no"></iframe>
-        </div>
-
-        <!-- Moniteurs -->
-        <div>
-            <h2 class="text-3xl font-bold text-[#003262] mb-2">Les Moniteurs</h2>
-            <p class="text-xl text-gray-700">L'équipe de moniteurs qualifiés et passionnés qui accompagnent nos membres dans leur pratique de la plongée.</p>
-            <ul class="mt-4 py-2 flex gap-5 text-center text-sm overflow-x-auto">
-                <li class="flex flex-col justify-end flex-shrink-0">
-                    <img src="/images/persons/elyes.jpeg" class="w-25 rounded-full object-cover mx-auto">
-                    <p>Elyes</p>
-                    <p class="text-[#FF8B62] font-bold">MF2</p>
-                </li>
-                <li class="flex flex-col justify-end flex-shrink-0">
-                    <img src="/images/persons/sebastien.jpeg" class="w-25 rounded-full object-cover mx-auto">
-                    <p>Sébastien</p>
-                    <p class="text-[#FF8B62] font-bold">E2 EH1</p>
-                </li>
-                <li class="flex flex-col justify-end flex-shrink-0">
-                    <img src="/images/persons/laurent.jpeg" class="w-25 rounded-full object-cover mx-auto">
-                    <p>Laurent</p>
-                    <p class="text-[#FF8B62] font-bold">E2 N5</p>
-                </li>
-                <li class="flex flex-col justify-end flex-shrink-0">
-                    <img src="/images/persons/thierry.jpeg" class="w-25 rounded-full object-cover mx-auto">
-                    <p>Thierry</p>
-                    <p class="text-[#FF8B62] font-bold">E2</p>
-                </li>
-                <li class="flex flex-col justify-end flex-shrink-0">
-                    <img src="/images/persons/philippe.jpeg" class="w-25 rounded-full object-cover mx-auto">
-                    <p>Philippe</p>
-                    <p class="text-[#FF8B62] font-bold">E1 EH1</p>
-                </li>
-                <li class="flex flex-col justify-end flex-shrink-0">
-                    <img src="/images/persons/marcelino.jpeg" class="w-25 rounded-full object-cover mx-auto">
-                    <p>Marcelino</p>
-                    <p class="text-[#FF8B62] font-bold">E1 EH1</p>
-                </li>
-                <li class="flex flex-col justify-end flex-shrink-0">
-                    <img src="/images/persons/manon.jpeg" class="w-25 rounded-full object-cover mx-auto">
-                    <p>Manon</p>
-                    <p class="text-[#FF8B62] font-bold">E1 ANTEOR</p>
-                </li>
-                <li class="flex flex-col justify-end flex-shrink-0">
-                    <img src="/images/persons/christian.jpeg" class="w-25 rounded-full object-cover mx-auto">
-                    <p>Christian</p>
-                    <p class="text-[#FF8B62] font-bold">E1</p>
-                </li>
-            </ul>
-        </div>
-
-        <!-- Espece de la semaine -->
-        <div class="bg-[#003262] rounded-lg shadow-lg flex md:w-100 md:self-center">
-            <div class="w-2/5 px-4 text-sm text-center flex flex-col justify-center items-center gap-4">
-                <p class="font-bold text-lg text-white">Espèce de la semaine</p>
-                <a class="text-sm font-light text-[#5AF8FB] border py-2 w-28 rounded-md" href="https://doris.ffessm.fr/Especes/Amphiprion-bicinctus-Poisson-clown-a-deux-bandes-1001" target="_blank">En savoir plus</a>
-            </div>
-            <div class="w-3/5 flex justify-end">
-                <img class="object-cover rounded-r-lg pl-5" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.Pa6z04honf6Z7FYYnM6OggAAAA%3Fr%3D0%26pid%3DApi&f=1&ipt=54b06dd930efefdefec935325828d14cd4240561e1c3016a68261fd372f75f3c&ipo=images">
-            </div>
-        </div>
+            </section> -->
+        </main>
 
         <!-- Retour haut de page -->
-        <div id="topPageButton"></div>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                fetch("top-page-button.html")
-                    .then(response => response.text())
-                    .then(data => {
-                        const container = document.getElementById("topPageButton");
-                        container.innerHTML = data;
+        <div class="top-page-button" id="top-page-button"></div>
 
-                        const button = container.querySelector("div");
-
-                        window.addEventListener("scroll", function () {
-                            if (window.scrollY > 200) {
-                                button.classList.remove("opacity-0", "pointer-events-none");
-                                button.classList.add("opacity-85");
-                            } else {
-                                button.classList.remove("opacity-85");
-                                button.classList.add("opacity-0", "pointer-events-none");
-                            }
-                        });
-                    });
-            });
-        </script>
-    </main>
-
-    <!-- Footer -->
-    <div id="footer"></div>
-    <script>
-        fetch("footer.html")
-            .then(response => response.text())
-            .then(data => {
-            document.getElementById("footer").innerHTML = data;
-            });
-    </script>
-</body>
+        <!-- Footer -->
+        <footer id="footer"></footer>
+    </body>
 </html>

@@ -1,0 +1,8 @@
+[images]
+remote_images = ['https://www\.salon-de-la-plongee\.com/files/news/25698_salon_plongee_2027_banniere_700x700px_site_salon\.jpg']
+
+[[headers]]
+for = "/images/*"
+
+  [headers.values]
+  Cache-Control = "public, max-age=604800, must-revalidate"
