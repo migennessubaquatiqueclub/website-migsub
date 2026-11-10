@@ -1,123 +1,80 @@
 <!doctype html>
-<html class="scroll-smooth">
+<html lang="fr">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Migennes Subaquatique</title>
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<style>
-    body {
-        font-family: 'Poppins', sans-serif;
-    }
-</style>
+<title>Adhésion | Migennes Subaquatique</title>
+<meta name="description" content="Rejoignez Migennes Subaquatique et retrouvez les options d'adhésion ainsi que les documents nécessaires." />
+<link rel="shortcut icon" href="https://img.icons8.com/?size=100&id=cSBMHDeqDYbh&format=png&color=22C3E6" type="image/x-icon">
+<link rel="preload" as="image" type="image/avif" imagesrcset="/.netlify/images?url=/images/img-adhesion.jpg&amp;fm=avif&amp;w=320 320w, /.netlify/images?url=/images/img-adhesion.jpg&amp;fm=avif&amp;w=640 640w, /.netlify/images?url=/images/img-adhesion.jpg&amp;fm=avif&amp;w=960 960w, /.netlify/images?url=/images/img-adhesion.jpg&amp;fm=avif&amp;w=1280 1280w, /.netlify/images?url=/images/img-adhesion.jpg&amp;fm=avif&amp;w=1600 1600w, /.netlify/images?url=/images/img-adhesion.jpg&amp;fm=avif&amp;w=2048 2048w" imagesizes="(min-width: 1232px) 1200px, (min-width: 601px) calc(100vw - 48px), calc(100vw - 32px)" fetchpriority="high">
+<script src="import-header-footer.js" defer></script>
+<script src="image-fallback.js" defer></script>
+<script src="menu-burger.js" defer></script>
+<script src="top-page-button.js" defer></script>
+<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="header.css">
+<link rel="stylesheet" href="adhesion.css">
+<link rel="stylesheet" href="top-page-button.css">
+<link rel="stylesheet" href="footer.css">
 </head>
-<body class="flex flex-col w-full" id="topPage">
+<body data-current-page="adhesion" id="top-page">
+    <a class="skip-link" href="#main-content">Aller au contenu principal</a>
     <!-- Header -->
-    <div id="header"></div>
-    <script>
-        fetch("header.html")
-            .then(response => response.text())
-            .then(data => {
-            document.getElementById("header").innerHTML = data;
-
-            const burger = document.getElementById('burger');
-            const menu = document.getElementById('menu');
-            if (burger && menu) {
-                burger.addEventListener('click', () => {
-                menu.classList.toggle('hidden');
-                });
-            }
-
-            // Détection page active
-            const links = document.querySelectorAll("nav a");
-            const currentPath = window.location.pathname;
-            links.forEach(link => {
-                if (link.getAttribute("href") === currentPath) {
-                link.classList.add("underline", "text-[#FF8B62]");
-
-                link.setAttribute("href", "#topPage");
-                }
-            });
-            });
-    </script>
+    <header class="header" id="header"></header>
 
     <!-- Main -->
-    <main class="w-full flex flex-col gap-10 px-8 pt-[150px] pb-5 md:pt-[155px] bg-[#f3f3f3]">
-        <!-- Titre principal -->
-        <div class="bg-[#003262] p-4 rounded shadow-lg text-white text-center text-[min(4vw,3rem)] font-bold">
-            <h1>Prendre une adhésion chez Migennes Subaquatique</h1>
-        </div>
+    <main class="site-main membership-main" id="main-content" tabindex="-1">
+        <section class="membership-hero">
+            <picture class="membership-hero-image">
+                <source type="image/avif" srcset="/.netlify/images?url=/images/img-adhesion.jpg&amp;fm=avif&amp;w=320 320w, /.netlify/images?url=/images/img-adhesion.jpg&amp;fm=avif&amp;w=640 640w, /.netlify/images?url=/images/img-adhesion.jpg&amp;fm=avif&amp;w=960 960w, /.netlify/images?url=/images/img-adhesion.jpg&amp;fm=avif&amp;w=1280 1280w, /.netlify/images?url=/images/img-adhesion.jpg&amp;fm=avif&amp;w=1600 1600w, /.netlify/images?url=/images/img-adhesion.jpg&amp;fm=avif&amp;w=2048 2048w" sizes="(min-width: 1232px) 1200px, (min-width: 601px) calc(100vw - 48px), calc(100vw - 32px)">
+                <img src="/images/img-adhesion.jpg" srcset="/.netlify/images?url=/images/img-adhesion.jpg&amp;w=320 320w, /.netlify/images?url=/images/img-adhesion.jpg&amp;w=640 640w, /.netlify/images?url=/images/img-adhesion.jpg&amp;w=960 960w, /.netlify/images?url=/images/img-adhesion.jpg&amp;w=1280 1280w, /.netlify/images?url=/images/img-adhesion.jpg&amp;w=1600 1600w, /.netlify/images?url=/images/img-adhesion.jpg&amp;w=2048 2048w" sizes="(min-width: 1232px) 1200px, (min-width: 601px) calc(100vw - 48px), calc(100vw - 32px)" width="2048" height="888" alt="Les adhérents de Migennes Subaquatique réunis sur un bateau de plongée" fetchpriority="high" decoding="async">
+            </picture>
+            <div class="page-heading">
+                <div class="title">
+                    <span>Prendre une adhésion chez</span>
+                    <h1>Migennes Subaquatique</h1>
+                </div>
+            </div>
+        </section>
 
         <!-- Choix helloasso ou formulaire pour adhésion -->
-        <img class="mt-10 max-w-[min(1100px, 80%)] self-center" src="images/logos/img-adhesion.jpeg">
-        <div class="flex flex-col justify-center md:flex-row gap-3 [min(1100px, 80%)] self-center">
-            <div class="flex items-center gap-3 pl-3 px-2 py-2 h-25 bg-[#003262] text-white rounded-xl md:w-[45%]">
-                <img src="images/logos/credit-card-orange.png" class="h-full">
-                <a target="_blank" href="https://www.helloasso.com/associations/migennes-subaquatique/adhesions/adhesion-2026-2027-sport">Inscription et paiement par carte bancaire via HelloAsso</a>
+        <div class="membership-options">
+            <div class="membership-option">
+                <img src="https://img.icons8.com/?size=100&id=55353&format=png&color=075985" width="256" height="256" loading="lazy" decoding="async" alt="">
+                <a target="_blank" rel="noopener noreferrer" href="https://www.helloasso.com/associations/migennes-subaquatique/adhesions/adhesion-2026-2027-sport">Inscription et paiement par carte bancaire via HelloAsso</a>
             </div>
-            <div class="flex items-center gap-3 pl-3 px-2 py-2 h-25 bg-[#003262] text-white rounded-xl md:w-[45%]">
-                <img src="images/logos/coins-orange.png" class="h-full">
+            <div class="membership-option">
+                <img src="https://img.icons8.com/?size=100&id=122142&format=png&color=075985" width="256" height="256" loading="lazy" decoding="async" alt="">
                 <a href="adhesion-form.html">Inscription et paiement par autre moyen</a>
             </div>
         </div>
-
         <!-- Documents -->
-        <div class="md:w-160 bg-[#003262] p-4 rounded shadow-lg text-white text-center text-xl md:text-3xl font-bold flex flex-col self-center gap-3">
-            <div class="h-15 flex items-center gap-2">
-                <img class="h-full" src="images/logos/file-upload.png">
-                <a href="/links/adhesion/CACI 2026.pdf" download>CACI</a>
-            </div>
-            <div class="h-15 flex items-center gap-2">
-                <img class="h-full" src="images/logos/file-upload.png">
-                <a href="/links/adhesion/CMPN.Contre_Indications.pdf" download>Contre indications</a>
-            </div>
-            <div class="h-15 flex items-center gap-2">
-                <img class="h-full" src="images/logos/file-upload.png">
-                <a href="/links/adhesion/CMPN-Questionnaire-daide-à-la-VM.pdf" download>Questionnaire médical</a>
-            </div>
-            <div class="h-15 flex items-center gap-2">
-                <img class="h-full" src="images/logos/file-upload.png">
-                <a href="/links/adhesion/CMPN-Fiche examen médical.pdf" download>Fiche examen médical</a>
-            </div>
-        </div>
+        <section class="content-panel documents-list" aria-label="Documents d'adhésion">
+            <h2>Documents pour l'adhésion</h2>
+            <a href="/links/adhesion/CACI 2026.pdf" download>
+                <img src="https://img.icons8.com/?size=100&id=83159&format=png&color=075985" width="256" height="256" loading="lazy" decoding="async" alt="">
+                CACI
+            </a>
+            <a href="/links/adhesion/CMPN.Contre_Indications.pdf" download>
+                <img src="https://img.icons8.com/?size=100&id=83159&format=png&color=075985" width="256" height="256" loading="lazy" decoding="async" alt="">
+                Contre-indications
+            </a>
+            <a href="/links/adhesion/CMPN-Questionnaire-daide-à-la-VM.pdf" download>
+                <img src="https://img.icons8.com/?size=100&id=83159&format=png&color=075985" width="256" height="256" loading="lazy" decoding="async" alt="">
+                Questionnaire médical
+            </a>
+            <a href="/links/adhesion/CMPN-Fiche examen médical.pdf" download>
+                <img src="https://img.icons8.com/?size=100&id=83159&format=png&color=075985" width="256" height="256" loading="lazy" decoding="async" alt="">
+                Fiche d'examen médical
+            </a>
+        </section>
 
-        <!-- Retour haut de page -->
-        <div id="topPageButton"></div>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                fetch("top-page-button.html")
-                    .then(response => response.text())
-                    .then(data => {
-                        const container = document.getElementById("topPageButton");
-                        container.innerHTML = data;
-
-                        const button = container.querySelector("div");
-
-                        window.addEventListener("scroll", function () {
-                            if (window.scrollY > 200) {
-                                button.classList.remove("opacity-0", "pointer-events-none");
-                                button.classList.add("opacity-85");
-                            } else {
-                                button.classList.remove("opacity-85");
-                                button.classList.add("opacity-0", "pointer-events-none");
-                            }
-                        });
-                    });
-            });
-        </script>
     </main>
+
+    <!-- Retour haut de page -->
+    <div class="top-page-button" id="top-page-button"></div>
 
     <!-- Footer -->
     <div id="footer"></div>
-    <script>
-        fetch("footer.html")
-            .then(response => response.text())
-            .then(data => {
-            document.getElementById("footer").innerHTML = data;
-            });
-    </script>
 </body>
 </html>

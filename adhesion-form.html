@@ -1,77 +1,80 @@
 <!doctype html>
-<html class="scroll-smooth">
+<html lang="fr">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Migennes Subaquatique</title>
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<style>
-    body {
-        font-family: 'Poppins', sans-serif;
-    }
-</style>
+<title>Formulaire d'adhésion | Migennes Subaquatique</title>
+<meta name="description" content="Remplissez le formulaire d'adhésion à Migennes Subaquatique." />
+<link rel="shortcut icon" href="https://img.icons8.com/?size=100&id=cSBMHDeqDYbh&format=png&color=22C3E6" type="image/x-icon">
+<script src="import-header-footer.js" defer></script>
+<script src="image-fallback.js" defer></script>
+<script src="menu-burger.js" defer></script>
+<script src="top-page-button.js" defer></script>
+<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="header.css">
+<link rel="stylesheet" href="adhesion-form.css">
+<link rel="stylesheet" href="top-page-button.css">
+<link rel="stylesheet" href="footer.css">
 </head>
-<body class="flex flex-col w-full bg-[#d9e4e8]" id="topPage">
+<body class="adhesion-form-page" data-current-page="adhesion" id="top-page">
+    <a class="skip-link" href="#main-content">Aller au contenu principal</a>
+    <header class="header" id="header"></header>
+
     <!-- Main -->
-    <main class="w-full flex flex-col gap-10 px-8 pb-5 md:pt-[100px]">
+    <main class="site-main membership-form-main" id="main-content" tabindex="-1">
         <!-- Titre principal -->
-        <div class="flex flex-col items-center">
-            <img class="w-18" src="/images/logos/plongeur-bas.png">
-            <p class="text-5xl font-bold text-[#003262]">Adhésion</p>
-            <p class="text-gray-500 text-center font-semibold">Rejoignez le club Migennes Subaquatique pour la saison en cours.</p>
+        <div class="page-heading">
+            <div class="title">
+                <span>Rejoignez le club Migennes Subaquatique</span>
+                <h1>Adhésion</h1>
+            </div>
         </div>
 
         <!-- Formulaire Adhésion -->
         <div>
-            <form class="flex flex-col items-center gap-5 shadow-xl rounded-xl px-4 py-4 bg-[#f6f6f6]" name="adhesion" netlify>
-                <div class="flex items-center gap-2">
-                    <img class="w-6 h-5" src="/images/logos/user.png">
-                    <p class="font-medium text-2xl">Vos informations</p>
-                </div>
-                <div class="flex gap-4">
-                    <div class="w-full">
-                        <label class="font-medium text-gray-500">PRÉNOM *</label>
-                        <input class="placeholder:text-gray-700 w-full bg-gray-200 rounded-lg px-4 py-2 border border-gray-400" type="text" name="prenom" placeholder="Jacques" required>
+            <form class="membership-form" name="adhesion" netlify>
+                <h2 class="form-heading">Vos informations</h2>
+                <div class="form-row">
+                    <div class="form-field">
+                        <label class="form-label" for="prenom">PRÉNOM *</label>
+                        <input class="form-control" id="prenom" type="text" name="prenom" autocomplete="given-name" placeholder="Jacques" required>
                     </div>
-                    <div class="w-full">
-                        <label class="font-medium text-gray-500">NOM *</label>
-                        <input class="placeholder:text-gray-700 w-full bg-gray-200 rounded-lg px-4 py-2 border border-gray-400" type="text" name="nom" placeholder="Cousteau" required>
+                    <div class="form-field">
+                        <label class="form-label" for="nom">NOM *</label>
+                        <input class="form-control" id="nom" type="text" name="nom" autocomplete="family-name" placeholder="Cousteau" required>
                     </div>
                 </div>
-                <div class="w-full">
-                    <label class="font-medium text-gray-500">DATE DE NAISSANCE *</label>
-                    <input class="placeholder:text-gray-700 w-full bg-gray-200 rounded-lg px-4 py-2 border border-gray-400" type="date" name="date_de_naissance" min="1940-01-01" required>
+                <div class="form-field">
+                    <label class="form-label" for="date-de-naissance">DATE DE NAISSANCE *</label>
+                    <input class="form-control" id="date-de-naissance" type="date" name="date_de_naissance" autocomplete="bday" min="1940-01-01" required>
                 </div>
-                <div class="w-full">
-                    <label class="font-medium text-gray-500">EMAIL *</label>
-                    <input class="placeholder:text-gray-700 w-full bg-gray-200 rounded-lg px-4 py-2 border border-gray-400" type="email" name="email" placeholder="jacques@ocean.fr" required>
+                <div class="form-field">
+                    <label class="form-label" for="email">EMAIL *</label>
+                    <input class="form-control" id="email" type="email" name="email" autocomplete="email" placeholder="jacques@ocean.fr" required>
                 </div>
-                <div class="w-full">
-                    <label class="font-medium text-gray-500">ADRESSE *</label>
-                    <input class="placeholder:text-gray-700 w-full bg-gray-200 rounded-lg px-4 py-2 border border-gray-400" type="text" name="adresse" placeholder="12 Rue Lauzet Ainé, 83110 Sanary-sur-Mer" required>
+                <div class="form-field">
+                    <label class="form-label" for="adresse">ADRESSE *</label>
+                    <input class="form-control" id="adresse" type="text" name="adresse" autocomplete="street-address" placeholder="12 Rue Lauzet Ainé, 83110 Sanary-sur-Mer" required>
                 </div>
-                <div class="w-full">
-                    <label class="font-medium text-gray-500">NUMÉRO DE TÉLÉPHONE *</label>
-                    <input class="placeholder:text-gray-700 w-full bg-gray-200 rounded-lg px-4 py-2 border border-gray-400" type="tel" name="numero_de_telephone" placeholder="06 12 34 56 78" required>
+                <div class="form-field">
+                    <label class="form-label" for="numero-de-telephone">NUMÉRO DE TÉLÉPHONE *</label>
+                    <input class="form-control" id="numero-de-telephone" type="tel" name="numero_de_telephone" autocomplete="tel" placeholder="06 12 34 56 78" required>
                 </div>
-                <div class="w-full">
-                    <label class="font-medium text-gray-500">NUM DE LICENCE *</label>
-                    <input class="placeholder:text-gray-700 w-full bg-gray-200 rounded-lg px-4 py-2 border border-gray-400" type="text" name="numero_de_license" required>
+                <div class="form-field">
+                    <label class="form-label" for="numero-de-licence">NUM DE LICENCE *</label>
+                    <input class="form-control" id="numero-de-licence" type="text" name="numero_de_license" required>
                 </div>
-                <div class="w-full">
-                    <label class="font-medium text-gray-500">Assurance *</label>
-                    <select class="placeholder:text-gray-700 w-full bg-gray-200 rounded-lg px-4 py-2 border border-gray-400" name="assurance" required>
+                <div class="form-field">
+                    <label class="form-label" for="assurance">Assurance *</label>
+                    <select class="form-control" id="assurance" name="assurance" required>
                         <option value="loisir1">Loisir 1 : 25€</option>
                         <option value="loisir2">Loisir 2 : 30€</option>
                         <option value="loisir3">Loisir 3 : 51€</option>
                     </select>
                 </div>
-                <div class="w-full">
-                    <label class="font-medium text-gray-500">NIVEAU ACTUEL *</label>
-                    <select class="placeholder:text-gray-700 w-full bg-gray-200 rounded-lg px-4 py-2 border border-gray-400" name="niveau_actuel" required>
+                <div class="form-field">
+                    <label class="form-label" for="niveau-actuel">NIVEAU ACTUEL *</label>
+                    <select class="form-control" id="niveau-actuel" name="niveau_actuel" required>
                         <option value="debutant">Débutant</option>
                         <option value="bronze">Bronze</option>
                         <option value="argent">Argent</option>
@@ -86,73 +89,73 @@
                         <option value="mf2">MF2</option>
                     </select>
                 </div>
-                <div class="w-full">
-                    <label class="font-medium text-gray-500">ACTIVITÉS ET FORMATIONS *</label>
-                    <div class="w-full overflow-y-scroll h-50">
+                <div class="form-field activity-field">
+                    <div class="activity-options">
                         <fieldset id="activites-group">
-                            <div class="flex gap-3 ml-3">
-                                <input class="checked:accent-[#FF8B62]" class="checked:accent-[#FF8B62]" type="checkbox" name="activites_et_formations" value="plongee_enfant">
-                                <label>Plongée enfant (&lt;12ans)</label>
+                            <legend class="form-label">ACTIVITÉS ET FORMATIONS *</legend>
+                            <div class="activity-option">
+                                <input class="form-choice" id="activite-plongee-enfant" type="checkbox" name="activites_et_formations" value="plongee_enfant">
+                                <label for="activite-plongee-enfant">Plongée enfant (&lt;12ans)</label>
                             </div>
-                            <div class="flex gap-3 ml-3">
-                                <input class="checked:accent-[#FF8B62]" type="checkbox" name="activites_et_formations" value="plongee_jeune">
-                                <label>Plongée jeune (12-16 ans)</label>
+                            <div class="activity-option">
+                                <input class="form-choice" id="activite-plongee-jeune" type="checkbox" name="activites_et_formations" value="plongee_jeune">
+                                <label for="activite-plongee-jeune">Plongée jeune (12-16 ans)</label>
                             </div>
-                            <div class="flex gap-3 ml-3">
-                                <input class="checked:accent-[#FF8B62]" type="checkbox" name="activites_et_formations" value="plongee_sous_marine">
-                                <label>Plongée sous-marine</label>
+                            <div class="activity-option">
+                                <input class="form-choice" id="activite-plongee-sous-marine" type="checkbox" name="activites_et_formations" value="plongee_sous_marine">
+                                <label for="activite-plongee-sous-marine">Plongée sous-marine</label>
                             </div>
-                            <div class="flex gap-3 ml-3">
-                                <input class="checked:accent-[#FF8B62]" type="checkbox" name="activites_et_formations" value="nage_avec_palmes">
-                                <label>Nage avec palmes</label>
+                            <div class="activity-option">
+                                <input class="form-choice" id="activite-nage-avec-palmes" type="checkbox" name="activites_et_formations" value="nage_avec_palmes">
+                                <label for="activite-nage-avec-palmes">Nage avec palmes</label>
                             </div>
-                            <div class="flex gap-3 ml-3">
-                                <input class="checked:accent-[#FF8B62]" type="checkbox" name="activites_et_formations" value="apnee">
-                                <label>Apnée</label>
+                            <div class="activity-option">
+                                <input class="form-choice" id="activite-apnee" type="checkbox" name="activites_et_formations" value="apnee">
+                                <label for="activite-apnee">Apnée</label>
                             </div>
-                            <div class="flex gap-3 ml-3">
-                                <input class="checked:accent-[#FF8B62]" type="checkbox" name="activites_et_formations" value="ecole_niveau_1">
-                                <label>École Niveau 1</label>
+                            <div class="activity-option">
+                                <input class="form-choice" id="activite-ecole-niveau-1" type="checkbox" name="activites_et_formations" value="ecole_niveau_1">
+                                <label for="activite-ecole-niveau-1">École Niveau 1</label>
                             </div>
-                            <div class="flex gap-3 ml-3">
-                                <input class="checked:accent-[#FF8B62]" type="checkbox" name="activites_et_formations" value="ecole_niveau_2">
-                                <label>École Niveau 2</label>
+                            <div class="activity-option">
+                                <input class="form-choice" id="activite-ecole-niveau-2" type="checkbox" name="activites_et_formations" value="ecole_niveau_2">
+                                <label for="activite-ecole-niveau-2">École Niveau 2</label>
                             </div>
-                            <div class="flex gap-3 ml-3">
-                                <input class="checked:accent-[#FF8B62]" type="checkbox" name="activites_et_formations" value="ecole_niveau_3">
-                                <label>École Niveau 3</label>
+                            <div class="activity-option">
+                                <input class="form-choice" id="activite-ecole-niveau-3" type="checkbox" name="activites_et_formations" value="ecole_niveau_3">
+                                <label for="activite-ecole-niveau-3">École Niveau 3</label>
                             </div>
-                            <div class="flex gap-3 ml-3">
-                                <input class="checked:accent-[#FF8B62]" type="checkbox" name="activites_et_formations" value="rifap">
-                                <label>RIFAP</label>
+                            <div class="activity-option">
+                                <input class="form-choice" id="activite-rifap" type="checkbox" name="activites_et_formations" value="rifap">
+                                <label for="activite-rifap">RIFAP</label>
                             </div>
-                            <div class="flex gap-3 ml-3">
-                                <input class="checked:accent-[#FF8B62]" type="checkbox" name="activites_et_formations" value="initiateur">
-                                <label>Initiateur</label>
+                            <div class="activity-option">
+                                <input class="form-choice" id="activite-initiateur" type="checkbox" name="activites_et_formations" value="initiateur">
+                                <label for="activite-initiateur">Initiateur</label>
                             </div>
-                            <div class="flex gap-3 ml-3">
-                                <input class="checked:accent-[#FF8B62]" type="checkbox" name="activites_et_formations" value="nitrox_base">
-                                <label>Nitrox base</label>
+                            <div class="activity-option">
+                                <input class="form-choice" id="activite-nitrox-base" type="checkbox" name="activites_et_formations" value="nitrox_base">
+                                <label for="activite-nitrox-base">Nitrox base</label>
                             </div>
-                            <div class="flex gap-3 ml-3">
-                                <input class="checked:accent-[#FF8B62]" type="checkbox" name="activites_et_formations" value="nitrox_confirme">
-                                <label>Nitrox confirmé</label>
+                            <div class="activity-option">
+                                <input class="form-choice" id="activite-nitrox-confirme" type="checkbox" name="activites_et_formations" value="nitrox_confirme">
+                                <label for="activite-nitrox-confirme">Nitrox confirmé</label>
                             </div>
-                            <div class="flex gap-3 ml-3">
-                                <input class="checked:accent-[#FF8B62]" type="checkbox" name="activites_et_formations" value="tiv">
-                                <label>TIV</label>
+                            <div class="activity-option">
+                                <input class="form-choice" id="activite-tiv" type="checkbox" name="activites_et_formations" value="tiv">
+                                <label for="activite-tiv">TIV</label>
                             </div>
-                            <div class="flex gap-3 ml-3">
-                                <input class="checked:accent-[#FF8B62]" type="checkbox" name="activites_et_formations" value="vetement_etanche">
-                                <label>Vêtement étanche</label>
+                            <div class="activity-option">
+                                <input class="form-choice" id="activite-vetement-etanche" type="checkbox" name="activites_et_formations" value="vetement_etanche">
+                                <label for="activite-vetement-etanche">Vêtement étanche</label>
                             </div>
-                            <div class="flex gap-3 ml-3">
-                                <input class="checked:accent-[#FF8B62]" type="checkbox" name="activites_et_formations" value="formation_anteor">
-                                <label>Formation ANTEOR</label>
+                            <div class="activity-option">
+                                <input class="form-choice" id="activite-formation-anteor" type="checkbox" name="activites_et_formations" value="formation_anteor">
+                                <label for="activite-formation-anteor">Formation ANTEOR</label>
                             </div>
-                            <div class="flex gap-3 ml-3">
-                                <input class="checked:accent-[#FF8B62]" type="checkbox" name="activites_et_formations" value="recyclage_anteor">
-                                <label>Recyclage ANTEOR</label>
+                            <div class="activity-option">
+                                <input class="form-choice" id="activite-recyclage-anteor" type="checkbox" name="activites_et_formations" value="recyclage_anteor">
+                                <label for="activite-recyclage-anteor">Recyclage ANTEOR</label>
                             </div>
                         </fieldset>
                         <script>
@@ -176,45 +179,47 @@
                         </script>
                     </div>
                 </div>
-                <div class="w-full">
-                <label class="font-medium text-gray-500">DROIT À L'IMAGE *</label>
+                <div class="form-field">
                 <fieldset>
-                    <label class="mr-3"><input class="mr-1 checked:accent-[#FF8B62]" type="radio" name="droit_a_limage" value="oui" checked>Oui</label>
-                    <label><input class="mr-1 checked:accent-[#FF8B62]" type="radio" name="droit_a_limage" value="non">Non</label>
+                    <legend class="form-label">DROIT À L'IMAGE *</legend>
+                    <label class="consent-option"><input class="form-choice" id="droit-image-oui" type="radio" name="droit_a_limage" value="oui" checked>Oui</label>
+                    <label><input class="form-choice" id="droit-image-non" type="radio" name="droit_a_limage" value="non">Non</label>
                 </fieldset>
                 </div>
-                <div class="w-full">
-                    <label class="font-medium text-gray-500">AUTORISATION PARENTALE</label>
-                    <div class="flex items-start gap-1 ml-3 mt-1">
-                        <input class="checked:accent-[#FF8B62] mt-1" type="checkbox" name="autorisation_parentale" value="oui">
-                        <label>J'autorise mon fils/ma fille à pratiquer les activités subaquatiques proposées par l'association.</label>
+                <div class="form-field parental-consent">
+                    <p class="form-label">AUTORISATION PARENTALE</p>
+                    <div class="consent-field">
+                        <input class="form-choice" id="autorisation-parentale" type="checkbox" name="autorisation_parentale" value="oui">
+                        <label for="autorisation-parentale">J'autorise mon fils/ma fille à pratiquer les activités subaquatiques proposées par l'association.</label>
                     </div>
                 </div>
-                <div class="w-full">
-                    <label class="font-medium text-gray-500">PERSONNE AUTORISÉE À VENIR RÉCUPÉRER L'ENFANT</label>
-                    <input class="placeholder:text-gray-700 w-full bg-gray-200 rounded-lg px-4 py-2 border border-gray-400" type="text" name="personne_autorisee_a_venir_recuperer_lenfant" placeholder="Jacques Cousteau">
+                <div class="form-field">
+                    <label class="form-label" for="personne-autorisee">PERSONNE AUTORISÉE À VENIR RÉCUPÉRER L'ENFANT</label>
+                    <input class="form-control" id="personne-autorisee" type="text" name="personne_autorisee_a_venir_recuperer_lenfant" placeholder="Jacques Cousteau">
                 </div>
-                <div class="w-full">
-                    <label class="font-medium text-gray-500">NOM, PRÉNOM, NUMÉRO DE TÉLÉPHONE DE LA PERSONNE À CONTACTER EN CAS D'INCIDENT *</label>
-                    <input class="placeholder:text-gray-700 w-full bg-gray-200 rounded-lg px-4 py-2 border border-gray-400" type="text" name="personne_a_contacter_en_cas_dincident" placeholder="Jacques Cousteau 06 01 23 45 67" required>
+                <div class="form-field">
+                    <label class="form-label" for="contact-incident">NOM, PRÉNOM, NUMÉRO DE TÉLÉPHONE DE LA PERSONNE À CONTACTER EN CAS D'INCIDENT *</label>
+                    <input class="form-control" id="contact-incident" type="text" name="personne_a_contacter_en_cas_dincident" placeholder="Jacques Cousteau 06 01 23 45 67" required>
                 </div>
-                <div class="w-full">
-                    <label class="font-medium text-gray-500">SON ADRESSE *</label>
-                    <input class="placeholder:text-gray-700 w-full bg-gray-200 rounded-lg px-4 py-2 border border-gray-400" type="text" name="adresse_de_la_personne_a_contacter_en_cas_dincident" placeholder="12 Rue Lauzet Ainé, 83110 Sanary-sur-Mer" required>
+                <div class="form-field">
+                    <label class="form-label" for="adresse-contact-incident">SON ADRESSE *</label>
+                    <input class="form-control" id="adresse-contact-incident" type="text" name="adresse_de_la_personne_a_contacter_en_cas_dincident" placeholder="12 Rue Lauzet Ainé, 83110 Sanary-sur-Mer" required>
                 </div>
-                <div class="w-full">
-                    <label class="font-medium text-gray-500">SON NUMÉRO DE TÉLÉPHONE *</label>
-                    <input class="placeholder:text-gray-700 w-full bg-gray-200 rounded-lg px-4 py-2 border border-gray-400" type="tel" name="numero_de_telephone_de_la_personne_a_contacter_en_cas_dincident" placeholder="06 12 34 56 78" required>
+                <div class="form-field">
+                    <label class="form-label" for="telephone-contact-incident">SON NUMÉRO DE TÉLÉPHONE *</label>
+                    <input class="form-control" id="telephone-contact-incident" type="tel" name="numero_de_telephone_de_la_personne_a_contacter_en_cas_dincident" placeholder="06 12 34 56 78" required>
                 </div>
-                <div class="w-full flex justify-around items-center">
-                    <div class="flex items-center">
-                        <img class="h-5" src="https://img.icons8.com/?size=100&id=7811&format=png&color=000000">
+                <div class="form-actions">
+                    <div class="back-link">
+                        <img class="form-action-icon" src="https://img.icons8.com/?size=100&amp;id=7811&amp;format=png&amp;color=000000" width="100" height="100" loading="lazy" decoding="async" alt="">
                         <a href="adhesion.html">Retour</a>
                     </div>
-                    <button class="flex justify-center items-center bg-[#003262] text-white py-2 px-2 rounded-md text-center" type="submit">CONFIRMER<img class="h-5" src="https://img.icons8.com/?size=100&id=7789&format=png&color=ffffff"></button>
+                    <button class="submit-button" type="submit">CONFIRMER<img class="form-action-icon" src="https://img.icons8.com/?size=100&amp;id=7789&amp;format=png&amp;color=ffffff" width="100" height="100" loading="lazy" decoding="async" alt=""></button>
                 </div>
             </form>
         </div>
     </main>
+    <div class="top-page-button" id="top-page-button"></div>
+    <div id="footer"></div>
 </body>
 </html>

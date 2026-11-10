@@ -1,39 +1,19 @@
-<header class="shadow-lg w-full fixed bg-[#d9e4e8]/85 backdrop-blur-lg z-50">
+<nav aria-label="Navigation principale">
+    <picture>
+        <source type="image/avif" srcset="/.netlify/images?url=/images/logo-migsub.png&fm=avif&w=64 64w, /.netlify/images?url=/images/logo-migsub.png&fm=avif&w=128 128w, /.netlify/images?url=/images/logo-migsub.png&fm=avif&w=256 256w, /.netlify/images?url=/images/logo-migsub.png&fm=avif&w=371 371w" sizes="8vh">
+        <img class="img-header" src="./images/logo-migsub.png" srcset="/.netlify/images?url=/images/logo-migsub.png&w=64 64w, /.netlify/images?url=/images/logo-migsub.png&w=128 128w, /.netlify/images?url=/images/logo-migsub.png&w=256 256w, /.netlify/images?url=/images/logo-migsub.png&w=371 371w" sizes="8vh" width="371" height="399" alt="Logo Migennes Subaquatique" loading="eager" decoding="async">
+    </picture>
 
-    <nav class="p-3">
+    <button class="burger-btn" id="burger-btn" type="button" aria-controls="nav-links" aria-expanded="false" aria-label="Ouvrir le menu">
+        <img class="burger-btn-close active" id="burger-btn-close" src="https://img.icons8.com/?size=100&amp;id=120374&amp;format=png&amp;color=ffffff" width="100" height="100" alt="" loading="eager" decoding="async">
+        <img class="burger-btn-open" id="burger-btn-open" src="https://img.icons8.com/?size=100&amp;id=46&amp;format=png&amp;color=ffffff" width="100" height="100" alt="" loading="eager" decoding="async">
+    </button>
 
-        <!-- 🔹 Top bar -->
-        <div class="flex justify-between px-8 items-center">
-
-            <a href="/index.html" class="md:hidden"><img class="h-24" src="https://image.jimcdn.com/app/cms/image/transf/dimension=371x10000:format=png/path/s6d486fb56e4e94d7/image/i58617c6ad28d4c1f/version/1737395830/image.png"></a>
-
-            <!-- 🔹 Bouton burger (visible mobile uniquement) -->
-            <button id="burger" class="text-3xl md:hidden">
-                <img class="h-10" src="/images/logos/menu-burger.png">
-            </button>
-
-        </div>
-
-        <!-- 🔹 Menu -->
-        <ul id="menu" class="hidden flex-col gap-6 text-2xl mt-4 md:flex md:flex-row md:justify-center md:items-center md:gap-8 md:text-[min(2.5vw,2.5rem)] md:mt-0">
-            <li class="flex justify-center hidden md:block md:w-25"><img class="md:w-25" src="https://image.jimcdn.com/app/cms/image/transf/dimension=371x10000:format=png/path/s6d486fb56e4e94d7/image/i58617c6ad28d4c1f/version/1737395830/image.png"></li>
-            <li class="flex justify-center"><a href="/index.html">Accueil</a></li>
-            <li class="flex justify-center"><a href="/agenda.html">Agenda</a></li>
-            <li class="flex justify-center"><a href="/bapteme.html">Baptême</a></li>
-            <li class="flex justify-center"><a href="/adhesion.html">Adhésion</a></li>
-            <li class="flex justify-center"><a href="/administratif.html">Administratif</a></li>
-            <li class="flex justify-center"><a href="/boutique.html">Boutique</a></li>
-        </ul>
-
-    </nav>
-
-    <script>
-        const burger = document.getElementById('burger');
-        const menu = document.getElementById('menu');
-
-        burger.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-    </script>
-
-</header>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="./index.html">Accueil</a></li>
+        <li><a href="./bapteme.html">Baptême</a></li>
+        <li><a href="./adhesion.html">Adhésion</a></li>
+        <li><a href="./administratif.html">Administratif</a></li>
+        <li><a href="./boutique.html">Boutique</a></li>
+    </ul>
+</nav>

@@ -1,154 +1,131 @@
 <!doctype html>
-<html class="scroll-smooth">
+<html lang="fr">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Migennes Subaquatique</title>
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<style>
-    body {
-        font-family: 'Poppins', sans-serif;
-    }
-</style>
+<title>Administratif | Migennes Subaquatique</title>
+<meta name="description" content="Découvrez les membres du bureau de Migennes Subaquatique et consultez les documents administratifs du club." />
+<link rel="shortcut icon" href="https://img.icons8.com/?size=100&id=cSBMHDeqDYbh&format=png&color=22C3E6" type="image/x-icon">
+<script src="import-header-footer.js" defer></script>
+<script src="image-fallback.js" defer></script>
+<script src="menu-burger.js" defer></script>
+<script src="top-page-button.js" defer></script>
+<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="header.css">
+<link rel="stylesheet" href="administratif.css">
+<link rel="stylesheet" href="top-page-button.css">
+<link rel="stylesheet" href="footer.css">
 </head>
-<body class="flex flex-col w-full" id="topPage">
+<body data-current-page="administratif" id="top-page">
+    <a class="skip-link" href="#main-content">Aller au contenu principal</a>
     <!-- Header -->
-    <div id="header"></div>
-    <script>
-        fetch("header.html")
-            .then(response => response.text())
-            .then(data => {
-            document.getElementById("header").innerHTML = data;
-
-            const burger = document.getElementById('burger');
-            const menu = document.getElementById('menu');
-            if (burger && menu) {
-                burger.addEventListener('click', () => {
-                menu.classList.toggle('hidden');
-                });
-            }
-
-            // Détection page active
-            const links = document.querySelectorAll("nav a");
-            const currentPath = window.location.pathname;
-            links.forEach(link => {
-                if (link.getAttribute("href") === currentPath) {
-                link.classList.add("underline", "text-[#FF8B62]");
-
-                link.setAttribute("href", "#topPage");
-                }
-            });
-            });
-    </script>
+    <header class="header" id="header"></header>
 
     <!-- Main -->
-    <main class="w-full flex flex-col gap-10 px-8 pt-[150px] pb-5 md:pt-[155px] bg-[#f3f3f3]">
+    <main class="site-main administrative-main" id="main-content" tabindex="-1">
         <!-- Titre principal -->
-        <div class="bg-[#003262] p-4 rounded shadow-lg text-white text-center text-[min(4vw,3rem)] font-bold">
-            <h1>Administratif</h1>
-        </div>
+        <section class="page-heading">
+            <div class="title">
+                <span>La vie du club</span>
+                <h1>Administratif</h1>
+            </div>
+        </section>
 
         <!-- Bureau -->
-        <div>
-            <h2 class="text-3xl font-bold text-[#003262] mb-2">Le Bureau Associatif</h2>
-            <p class="text-xl text-gray-700">L'équipe dirigeante qui organise, structure et fait vivre notre passion de la plongée au quotidien.</p>
-            <div class="my-5 flex flex-wrap gap-4 justify-center items-end text-center md:self-center">
-                <div class="w-7/12 md:w-4/12 h-full pb-1 bg-gray-100 rounded-lg shadow-lg">
-                    <img src="/images/persons/elyes.jpeg" class="w-full object-cover mx-auto rounded-t-lg">
-                    <p class="px-2 text-md">Elyes SASSI</p>
-                    <p class="text-sm text-[#FF8B62] font-bold px-2">Président</p>
+        <section class="content-panel bureau">
+            <h2 class="bureau-title">Le Bureau Associatif</h2>
+            <p class="bureau-intro">L'équipe dirigeante qui organise, structure et fait vivre notre passion de la plongée au quotidien.</p>
+            <div class="bureau-grid">
+                <div class="bureau-member">
+                    <picture>
+                        <source type="image/avif" srcset="/.netlify/images?url=/images/persons/elyes.jpg&amp;fm=avif&amp;w=160 160w, /.netlify/images?url=/images/persons/elyes.jpg&amp;fm=avif&amp;w=320 320w, /.netlify/images?url=/images/persons/elyes.jpg&amp;fm=avif&amp;w=480 480w, /.netlify/images?url=/images/persons/elyes.jpg&amp;fm=avif&amp;w=640 640w" sizes="(min-width: 48rem) 33.333vw, 58.333vw">
+                        <img src="/images/persons/elyes.jpg" srcset="/.netlify/images?url=/images/persons/elyes.jpg&amp;w=160 160w, /.netlify/images?url=/images/persons/elyes.jpg&amp;w=320 320w, /.netlify/images?url=/images/persons/elyes.jpg&amp;w=480 480w, /.netlify/images?url=/images/persons/elyes.jpg&amp;w=640 640w" sizes="(min-width: 48rem) 33.333vw, 58.333vw" width="874" height="874" class="bureau-member-photo" alt="Elyes Sassi, président de l'association" loading="lazy" decoding="async">
+                    </picture>
+                    <p class="bureau-member-name">Elyes SASSI</p>
+                    <p class="bureau-member-role">Président</p>
                 </div>
-                <div class="w-5/12 md:w-3/12 md:order-[-1] h-full pb-1 bg-gray-100 rounded-lg shadow-lg">
-                    <img src="/images/persons/manon.jpeg" class="w-full object-cover mx-auto rounded-t-lg">
-                    <p class="px-2 text-md">Manon DELAPORTE</p>
-                    <p class="text-sm text-[#FF8B62] font-bold px-2">Secrétaire</p>
+                <div class="bureau-member">
+                    <picture>
+                        <source type="image/avif" srcset="/.netlify/images?url=/images/persons/manon.jpeg&amp;fm=avif&amp;w=160 160w, /.netlify/images?url=/images/persons/manon.jpeg&amp;fm=avif&amp;w=320 320w, /.netlify/images?url=/images/persons/manon.jpeg&amp;fm=avif&amp;w=480 480w, /.netlify/images?url=/images/persons/manon.jpeg&amp;fm=avif&amp;w=640 640w" sizes="(min-width: 48rem) 25vw, 41.667vw">
+                        <img src="/images/persons/manon.jpeg" srcset="/.netlify/images?url=/images/persons/manon.jpeg&amp;w=160 160w, /.netlify/images?url=/images/persons/manon.jpeg&amp;w=320 320w, /.netlify/images?url=/images/persons/manon.jpeg&amp;w=480 480w, /.netlify/images?url=/images/persons/manon.jpeg&amp;w=640 640w" sizes="(min-width: 48rem) 25vw, 41.667vw" width="768" height="789" class="bureau-member-photo" alt="Manon Delaporte, secrétaire de l'association" loading="lazy" decoding="async">
+                    </picture>
+                    <p class="bureau-member-name">Manon DELAPORTE</p>
+                    <p class="bureau-member-role">Secrétaire</p>
                 </div>
-                <div class="w-5/12 md:w-3/12 h-full pb-1 bg-gray-100 rounded-lg shadow-lg">
-                    <img src="/images/persons/charlotte.jpeg" class="w-full object-cover mx-auto rounded-t-lg">
-                    <p class="px-2 text-md">Charlotte BOUDEVILLE</p>
-                    <p class="text-sm text-[#FF8B62] font-bold px-2">Trésorière</p>
+                <div class="bureau-member">
+                    <picture>
+                        <source type="image/avif" srcset="/.netlify/images?url=/images/persons/charlotte.jpg&amp;fm=avif&amp;w=160 160w, /.netlify/images?url=/images/persons/charlotte.jpg&amp;fm=avif&amp;w=320 320w, /.netlify/images?url=/images/persons/charlotte.jpg&amp;fm=avif&amp;w=480 480w, /.netlify/images?url=/images/persons/charlotte.jpg&amp;fm=avif&amp;w=640 640w" sizes="(min-width: 48rem) 25vw, 41.667vw">
+                        <img src="/images/persons/charlotte.jpg" srcset="/.netlify/images?url=/images/persons/charlotte.jpg&amp;w=160 160w, /.netlify/images?url=/images/persons/charlotte.jpg&amp;w=320 320w, /.netlify/images?url=/images/persons/charlotte.jpg&amp;w=480 480w, /.netlify/images?url=/images/persons/charlotte.jpg&amp;w=640 640w" sizes="(min-width: 48rem) 25vw, 41.667vw" width="993" height="993" class="bureau-member-photo" alt="Charlotte Boudeville, trésorière de l'association" loading="lazy" decoding="async">
+                    </picture>
+                    <p class="bureau-member-name">Charlotte BOUDEVILLE</p>
+                    <p class="bureau-member-role">Trésorière</p>
                 </div>
-                <div class="w-5/12 md:w-3/12 h-full pb-1 bg-gray-100 rounded-lg shadow-lg">
-                    <img src="/images/persons/marcelino.jpeg" class="w-full object-cover mx-auto rounded-t-lg">
-                    <p class="px-2 text-md">Marcelino DA COSTA</p>
-                    <p class="text-sm text-[#FF8B62] font-bold">Responsable<br>Animation</p>
+                <div class="bureau-member">
+                    <picture>
+                        <source type="image/avif" srcset="/.netlify/images?url=/images/persons/marcelino.jpg&amp;fm=avif&amp;w=160 160w, /.netlify/images?url=/images/persons/marcelino.jpg&amp;fm=avif&amp;w=320 320w, /.netlify/images?url=/images/persons/marcelino.jpg&amp;fm=avif&amp;w=379 379w" sizes="(min-width: 48rem) 25vw, 41.667vw">
+                        <img src="/images/persons/marcelino.jpg" srcset="/.netlify/images?url=/images/persons/marcelino.jpg&amp;w=160 160w, /.netlify/images?url=/images/persons/marcelino.jpg&amp;w=320 320w, /.netlify/images?url=/images/persons/marcelino.jpg&amp;w=379 379w" sizes="(min-width: 48rem) 25vw, 41.667vw" width="379" height="379" class="bureau-member-photo" alt="Marcelino Da Costa, responsable animation" loading="lazy" decoding="async">
+                    </picture>
+                    <p class="bureau-member-name">Marcelino DA COSTA</p>
+                    <p class="bureau-member-role">Responsable<br>Animation</p>
                 </div>
-                <div class="w-5/12 md:w-3/12 h-full pb-1 bg-gray-100 rounded-lg shadow-lg">
-                    <img src="/images/persons/laurent.jpeg" class="w-full object-cover mx-auto rounded-t-lg">
-                    <p class="px-2 text-md">Laurent PORQUET</p>
-                    <p class="text-sm text-[#FF8B62] font-bold">Responsable<br>Matériel</p>
+                <div class="bureau-member">
+                    <picture>
+                        <source type="image/avif" srcset="/.netlify/images?url=/images/persons/laurent.jpg&amp;fm=avif&amp;w=160 160w, /.netlify/images?url=/images/persons/laurent.jpg&amp;fm=avif&amp;w=320 320w, /.netlify/images?url=/images/persons/laurent.jpg&amp;fm=avif&amp;w=480 480w, /.netlify/images?url=/images/persons/laurent.jpg&amp;fm=avif&amp;w=640 640w" sizes="(min-width: 48rem) 25vw, 41.667vw">
+                        <img src="/images/persons/laurent.jpg" srcset="/.netlify/images?url=/images/persons/laurent.jpg&amp;w=160 160w, /.netlify/images?url=/images/persons/laurent.jpg&amp;w=320 320w, /.netlify/images?url=/images/persons/laurent.jpg&amp;w=480 480w, /.netlify/images?url=/images/persons/laurent.jpg&amp;w=640 640w" sizes="(min-width: 48rem) 25vw, 41.667vw" width="822" height="822" class="bureau-member-photo" alt="Laurent Porquet, responsable matériel" loading="lazy" decoding="async">
+                    </picture>
+                    <p class="bureau-member-name">Laurent PORQUET</p>
+                    <p class="bureau-member-role">Responsable<br>Matériel</p>
                 </div>
-                <div class="w-5/12 md:w-3/12 h-full pb-1 bg-gray-100 rounded-lg shadow-lg">
-                    <img src="/images/persons/philippe.jpeg" class="w-full object-cover mx-auto rounded-t-lg">
-                    <p class="px-2 text-md">Philippe COELHO</p>
-                    <p class="text-sm text-[#FF8B62] font-bold">Responsable<br>Matériel</p>
+                <div class="bureau-member">
+                    <picture>
+                        <source type="image/avif" srcset="/.netlify/images?url=/images/persons/philippe.jpeg&amp;fm=avif&amp;w=160 160w, /.netlify/images?url=/images/persons/philippe.jpeg&amp;fm=avif&amp;w=320 320w, /.netlify/images?url=/images/persons/philippe.jpeg&amp;fm=avif&amp;w=480 480w, /.netlify/images?url=/images/persons/philippe.jpeg&amp;fm=avif&amp;w=640 640w" sizes="(min-width: 48rem) 25vw, 41.667vw">
+                        <img src="/images/persons/philippe.jpeg" srcset="/.netlify/images?url=/images/persons/philippe.jpeg&amp;w=160 160w, /.netlify/images?url=/images/persons/philippe.jpeg&amp;w=320 320w, /.netlify/images?url=/images/persons/philippe.jpeg&amp;w=480 480w, /.netlify/images?url=/images/persons/philippe.jpeg&amp;w=640 640w" sizes="(min-width: 48rem) 25vw, 41.667vw" width="750" height="750" class="bureau-member-photo" alt="Philippe Coelho, responsable matériel" loading="lazy" decoding="async">
+                    </picture>
+                    <p class="bureau-member-name">Philippe COELHO</p>
+                    <p class="bureau-member-role">Responsable<br>Matériel</p>
                 </div>
-                <div class="w-5/12 md:w-3/12 h-full pb-1 bg-gray-100 rounded-lg shadow-lg">
-                    <img src="/images/persons/said.jpeg" class="w-full object-cover mx-auto rounded-t-lg">
-                    <p class="px-2 text-md">Saïd EL HAIRECH</p>
-                    <p class="text-sm text-[#FF8B62] font-bold">Responsable<br>Communication</p>
+                <div class="bureau-member">
+                    <picture>
+                        <source type="image/avif" srcset="/.netlify/images?url=/images/persons/said.jpeg&amp;fm=avif&amp;w=160 160w, /.netlify/images?url=/images/persons/said.jpeg&amp;fm=avif&amp;w=320 320w, /.netlify/images?url=/images/persons/said.jpeg&amp;fm=avif&amp;w=480 480w, /.netlify/images?url=/images/persons/said.jpeg&amp;fm=avif&amp;w=640 640w" sizes="(min-width: 48rem) 25vw, 41.667vw">
+                        <img src="/images/persons/said.jpeg" srcset="/.netlify/images?url=/images/persons/said.jpeg&amp;w=160 160w, /.netlify/images?url=/images/persons/said.jpeg&amp;w=320 320w, /.netlify/images?url=/images/persons/said.jpeg&amp;w=480 480w, /.netlify/images?url=/images/persons/said.jpeg&amp;w=640 640w" sizes="(min-width: 48rem) 25vw, 41.667vw" width="1200" height="1200" class="bureau-member-photo" alt="Saïd El Hairech, responsable communication" loading="lazy" decoding="async">
+                    </picture>
+                    <p class="bureau-member-name">Saïd EL HAIRECH</p>
+                    <p class="bureau-member-role">Responsable<br>Communication</p>
                 </div>
-                <div class="w-5/12 md:w-3/12 h-full pb-1 bg-gray-100 rounded-lg shadow-lg">
-                    <img src="/images/persons/sebastien.jpeg" class="w-full object-cover mx-auto rounded-t-lg">
-                    <p class="px-2 text-md">Sébastien MOREAU</p>
-                    <p class="text-sm text-[#FF8B62] font-bold">Responsable<br>Technique</p>
+                <div class="bureau-member">
+                    <picture>
+                        <source type="image/avif" srcset="/.netlify/images?url=/images/persons/sebastien.jpeg&amp;fm=avif&amp;w=160 160w, /.netlify/images?url=/images/persons/sebastien.jpeg&amp;fm=avif&amp;w=320 320w, /.netlify/images?url=/images/persons/sebastien.jpeg&amp;fm=avif&amp;w=480 480w, /.netlify/images?url=/images/persons/sebastien.jpeg&amp;fm=avif&amp;w=640 640w" sizes="(min-width: 48rem) 25vw, 41.667vw">
+                        <img src="/images/persons/sebastien.jpeg" srcset="/.netlify/images?url=/images/persons/sebastien.jpeg&amp;w=160 160w, /.netlify/images?url=/images/persons/sebastien.jpeg&amp;w=320 320w, /.netlify/images?url=/images/persons/sebastien.jpeg&amp;w=480 480w, /.netlify/images?url=/images/persons/sebastien.jpeg&amp;w=640 640w" sizes="(min-width: 48rem) 25vw, 41.667vw" width="719" height="719" class="bureau-member-photo" alt="Sébastien Moreau, responsable technique" loading="lazy" decoding="async">
+                    </picture>
+                    <p class="bureau-member-name">Sébastien MOREAU</p>
+                    <p class="bureau-member-role">Responsable<br>Technique</p>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- Documents -->
-        <div class="md:w-160 bg-[#003262] p-4 rounded shadow-lg text-white text-center text-xl md:text-3xl font-bold flex flex-col self-center gap-3">
-            <div class="h-15 flex items-center gap-2">
-                <img class="h-full" src="images/logos/file-upload.png">
-                <a href="/links/administratif/Assurance RC_Mig-Sub_2024-2025.pdf" download>Assurance Responsabilité Civile</a>
-            </div>
-            <div class="h-15 flex items-center gap-2">
-                <img class="h-full" src="images/logos/file-upload.png">
-                <a href="/links/administratif/RI MIGENNES SUBAQUATIQUE 2017.pdf" download>Réglement Intérieur</a>
-            </div>
-            <div class="h-15 flex items-center gap-2">
-                <img class="h-full" src="images/logos/file-upload.png">
-                <a href="/links/administratif/STATUTS MIGENNES SUBAQUATIQUE 2017.pdf" download>Statut Migennes Subaquatique</a>
-            </div>
-        </div>
+        <section class="content-panel administrative-documents" aria-label="Documents administratifs">
+            <h2>Documents administratifs</h2>
+            <a href="/links/administratif/Assurance RC_Mig-Sub_2024-2025.pdf" download>
+                <img src="https://img.icons8.com/?size=100&id=83159&format=png&color=075985" width="256" height="256" loading="lazy" decoding="async" alt="">
+                Assurance Responsabilité Civile
+            </a>
+            <a href="/links/administratif/RI MIGENNES SUBAQUATIQUE 2017.pdf" download>
+                <img src="https://img.icons8.com/?size=100&id=83159&format=png&color=075985" width="256" height="256" loading="lazy" decoding="async" alt="">
+                Règlement intérieur
+            </a>
+            <a href="/links/administratif/STATUTS MIGENNES SUBAQUATIQUE 2017.pdf" download>
+                <img src="https://img.icons8.com/?size=100&id=83159&format=png&color=075985" width="256" height="256" loading="lazy" decoding="async" alt="">
+                Statuts de Migennes Subaquatique
+            </a>
+        </section>
 
-        <!-- Retour haut de page -->
-        <div id="topPageButton"></div>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                fetch("top-page-button.html")
-                    .then(response => response.text())
-                    .then(data => {
-                        const container = document.getElementById("topPageButton");
-                        container.innerHTML = data;
-
-                        const button = container.querySelector("div");
-
-                        window.addEventListener("scroll", function () {
-                            if (window.scrollY > 200) {
-                                button.classList.remove("opacity-0", "pointer-events-none");
-                                button.classList.add("opacity-85");
-                            } else {
-                                button.classList.remove("opacity-85");
-                                button.classList.add("opacity-0", "pointer-events-none");
-                            }
-                        });
-                    });
-            });
-        </script>
     </main>
+
+    <!-- Retour haut de page -->
+    <div class="top-page-button" id="top-page-button"></div>
 
     <!-- Footer -->
     <div id="footer"></div>
-    <script>
-        fetch("footer.html")
-            .then(response => response.text())
-            .then(data => {
-            document.getElementById("footer").innerHTML = data;
-            });
-    </script>
 </body>
 </html>

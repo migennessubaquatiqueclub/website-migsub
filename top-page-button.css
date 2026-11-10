@@ -1,0 +1,30 @@
+.top-page-button-control {
+    position: fixed;
+    bottom: 2vh;
+    right: 3vw;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    background-color: var(--color-aqua-500);
+    border-radius: 999px;
+    padding: 2px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.top-page-button-control.active,
+.top-page-button-control.opacity-85 {
+    opacity: 0.85;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.top-page-button-control a {
+    display: block;
+}
+
+.top-page-button-control img {
+    display: block;
+    width: 48px;
+    height: 48px;
+}
