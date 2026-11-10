@@ -64,12 +64,6 @@
     font-weight: 700;
 }
 
-@media (min-width: 768px) {
-    .bureau-member-secretary {
-        order: -1;
-    }
-}
-
 .administrative-documents {
     display: grid;
     width: min(100%, 760px);
@@ -106,17 +100,27 @@
     object-fit: contain;
 }
 
-@media (min-width: 701px) and (max-width: 1000px) {
+@media (min-width: 701px) {
+    .bureau-grid {
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+    }
+}
+
+@media (min-width: 860px) {
     .bureau-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    .bureau-member:nth-last-child(2) {
-        grid-column: 2;
+    .bureau-member:nth-child(1) {
+        order: -2;
     }
 
-    .bureau-member:last-child {
-        grid-column: 3;
+    .bureau-member:nth-child(2) {
+        order: -3;
+    }
+
+    .bureau-member:nth-child(3) {
+        order: -1;
     }
 }
 

@@ -6,10 +6,11 @@
         <title>Migennes Subaquatique</title>
         <meta name="description" content="Découvrez Migennes Subaquatique, le club de plongée de Migennes : actualités, planning, baptêmes et inscriptions." />
         <link rel="shortcut icon" href="https://img.icons8.com/?size=100&id=cSBMHDeqDYbh&format=png&color=22C3E6" type="image/x-icon">
-        <link rel="preload" as="image" type="image/avif" imagesrcset="/.netlify/images?url=/images/actualites/piscine.png&amp;fm=avif&amp;w=320 320w, /.netlify/images?url=/images/actualites/piscine.png&amp;fm=avif&amp;w=640 640w, /.netlify/images?url=/images/actualites/piscine.png&amp;fm=avif&amp;w=960 960w, /.netlify/images?url=/images/actualites/piscine.png&amp;fm=avif&amp;w=1280 1280w, /.netlify/images?url=/images/actualites/piscine.png&amp;fm=avif&amp;w=1600 1600w, /.netlify/images?url=/images/actualites/piscine.png&amp;fm=avif&amp;w=2048 2048w" imagesizes="95vw" fetchpriority="high">
+        <link rel="preload" as="image" type="image/avif" imagesrcset="/.netlify/images?url=/images/actualites/adhesion.jpg&amp;fm=avif&amp;w=320 320w, /.netlify/images?url=/images/actualites/adhesion.jpg&amp;fm=avif&amp;w=640 640w, /.netlify/images?url=/images/actualites/adhesion.jpg&amp;fm=avif&amp;w=960 960w, /.netlify/images?url=/images/actualites/adhesion.jpg&amp;fm=avif&amp;w=1280 1280w, /.netlify/images?url=/images/actualites/adhesion.jpg&amp;fm=avif&amp;w=1600 1600w" imagesizes="(min-width: 1248px) 1200px, (min-width: 601px) calc(100vw - 48px), calc(95vw - 40px)" fetchpriority="high">
         <script src="import-header-footer.js" defer></script>
         <script src="image-fallback.js" defer></script>
         <script src="menu-burger.js" defer></script>
+        <script src="planning-toggle.js" defer></script>
         <script src="top-page-button.js" defer></script>
         <link rel="stylesheet" href="site.css">
         <noscript><link rel="stylesheet" href="site.css"></noscript>
@@ -22,14 +23,19 @@
         <link rel="stylesheet" href="footer.css">
         <noscript><link rel="stylesheet" href="footer.css"></noscript>
     </head>
-    <body id="top-page">
+    <body class="home-page" data-current-page="home" id="top-page">
+        <a class="skip-link" href="#main-content">Aller au contenu principal</a>
         <!-- Header -->
         <header class="header" id="header"></header>
 
         <!-- Main -->
-        <main>
+        <main class="home-main" id="main-content" tabindex="-1">
             <!-- Titre principal -->
             <section class="hero">
+                <picture class="hero-image" aria-hidden="true">
+                    <source type="image/avif" srcset="/.netlify/images?url=/images/piscine.png&amp;fm=avif&amp;w=320 320w, /.netlify/images?url=/images/piscine.png&amp;fm=avif&amp;w=640 640w, /.netlify/images?url=/images/piscine.png&amp;fm=avif&amp;w=960 960w, /.netlify/images?url=/images/piscine.png&amp;fm=avif&amp;w=1280 1280w, /.netlify/images?url=/images/piscine.png&amp;fm=avif&amp;w=1600 1600w, /.netlify/images?url=/images/piscine.png&amp;fm=avif&amp;w=2048 2048w" sizes="(min-width: 1200px) 720px, (min-width: 900px) 55vw, (min-width: 601px) 42vw, 85vw">
+                    <img src="/images/piscine.png" srcset="/.netlify/images?url=/images/piscine.png&amp;w=320 320w, /.netlify/images?url=/images/piscine.png&amp;w=640 640w, /.netlify/images?url=/images/piscine.png&amp;w=960 960w, /.netlify/images?url=/images/piscine.png&amp;w=1280 1280w, /.netlify/images?url=/images/piscine.png&amp;w=1600 1600w, /.netlify/images?url=/images/piscine.png&amp;w=2048 2048w" sizes="(min-width: 1200px) 720px, (min-width: 900px) 55vw, (min-width: 601px) 42vw, 85vw" width="2048" height="1152" alt="Piscine de Migennes" loading="lazy" decoding="async">
+                </picture>
                 <div class="page-heading">
                     <div class="title">
                         <span>Bienvenue chez</span>
@@ -38,7 +44,7 @@
                     </div>
                 </div>
                 <div class="links">
-                    <a class="link" href="./bapteme.html">Découvrir la plongée</a>
+                    <a class="link link-discover" href="./bapteme.html">Découvrir la plongée</a>
                     <a class="link" href="#scroll-planning">Voir le planning</a>
                 </div>
             </section>
@@ -49,21 +55,27 @@
                 <div class="list">
                     <div class="actu">
                         <picture>
-                            <source type="image/avif" srcset="/.netlify/images?url=/images/actualites/piscine.png&amp;fm=avif&amp;w=320 320w, /.netlify/images?url=/images/actualites/piscine.png&amp;fm=avif&amp;w=640 640w, /.netlify/images?url=/images/actualites/piscine.png&amp;fm=avif&amp;w=960 960w, /.netlify/images?url=/images/actualites/piscine.png&amp;fm=avif&amp;w=1280 1280w, /.netlify/images?url=/images/actualites/piscine.png&amp;fm=avif&amp;w=1600 1600w, /.netlify/images?url=/images/actualites/piscine.png&amp;fm=avif&amp;w=2048 2048w" sizes="95vw">
-                            <img src="/images/actualites/piscine.png" srcset="/.netlify/images?url=/images/actualites/piscine.png&amp;w=320 320w, /.netlify/images?url=/images/actualites/piscine.png&amp;w=640 640w, /.netlify/images?url=/images/actualites/piscine.png&amp;w=960 960w, /.netlify/images?url=/images/actualites/piscine.png&amp;w=1280 1280w, /.netlify/images?url=/images/actualites/piscine.png&amp;w=1600 1600w, /.netlify/images?url=/images/actualites/piscine.png&amp;w=2048 2048w" sizes="95vw" width="2048" height="1152" alt="Piscine de Migennes" loading="eager" fetchpriority="high" decoding="async">
+                            <source type="image/avif" srcset="/.netlify/images?url=/images/actualites/fosse-dijon.JPG&amp;fm=avif&amp;w=320 320w, /.netlify/images?url=/images/actualites/fosse-dijon.JPG&amp;fm=avif&amp;w=640 640w, /.netlify/images?url=/images/actualites/fosse-dijon.JPG&amp;fm=avif&amp;w=960 960w, /.netlify/images?url=/images/actualites/fosse-dijon.JPG&amp;fm=avif&amp;w=1280 1280w, /.netlify/images?url=/images/actualites/fosse-dijon.JPG&amp;fm=avif&amp;w=1600 1600w, /.netlify/images?url=/images/actualites/fosse-dijon.JPG&amp;fm=avif&amp;w=2048 2048w" sizes="(min-width: 1200px) 720px, (min-width: 900px) 55vw, (min-width: 601px) 42vw, 85vw">
+                            <img src="/images/actualites/fosse-dijon.JPG" srcset="/.netlify/images?url=/images/actualites/fosse-dijon.JPG&amp;w=320 320w, /.netlify/images?url=/images/actualites/fosse-dijon.JPG&amp;w=640 640w, /.netlify/images?url=/images/actualites/fosse-dijon.JPG&amp;w=960 960w, /.netlify/images?url=/images/actualites/fosse-dijon.JPG&amp;w=1280 1280w, /.netlify/images?url=/images/actualites/fosse-dijon.JPG&amp;w=1600 1600w, /.netlify/images?url=/images/actualites/fosse-dijon.JPG&amp;w=2048 2048w" sizes="(min-width: 1200px) 720px, (min-width: 900px) 55vw, (min-width: 601px) 42vw, 85vw" width="4000" height="3000" alt="Piscine fosse de Dijon" loading="lazy" decoding="async">
+                        </picture>
+                        <h3>Inscriptions : Sortie à la fosse de Dijon</h3>
+                        <p>Les inscriptions sont ouvertes pour les sorties à la fosse de Dijon.<br><a href="#scroll-planning">S'inscrire</a></p>
+                    </div>
+                    <span></span>
+                    <div class="actu">
+                        <picture>
+                            <source type="image/avif" srcset="/.netlify/images?url=/images/actualites/noel.jpg&amp;fm=avif&amp;w=320 320w, /.netlify/images?url=/images/actualites/noel.jpg&amp;fm=avif&amp;w=640 640w">
+                            <img src="/images/actualites/noel.jpg" srcset="/.netlify/images?url=/images/actualites/noel.jpg&amp;w=320 320w, /.netlify/images?url=/images/actualites/noel.jpg&amp;w=640 640w" sizes="(min-width: 1200px) 720px, (min-width: 900px) 55vw, (min-width: 601px) 42vw, 85vw" width="640" height="640" alt="Repas de Noël" loading="lazy" decoding="async">
                         </picture>
                         <h3>Soirée de Noël</h3>
                         <p>Rendez-vous le samedi 12 décembre 2026 pour le repas de fin d'année.</p>
                     </div>
                     <span></span>
                     <div class="actu">
-                        <!-- <img src="" alt=""> -->
-                        <h3>Inscriptions : Sortie à la fosse de Dijon</h3>
-                        <p>Les inscriptions sont ouvertes pour les sorties à la fosse de Dijon le samedi 23 janvier 2027 et le samedi 27 février 2027.<br><a href="./adhesion.html">S'inscrire</a></p>
-                    </div>
-                    <span></span>
-                    <div class="actu" id="scroll-planning">
-                        <!-- <img src="" alt=""> -->
+                        <picture>
+                            <source type="image/avif" srcset="/.netlify/images?url=/images/actualites/adhesion.jpg&amp;fm=avif&amp;w=320 320w, /.netlify/images?url=/images/actualites/adhesion.jpg&amp;fm=avif&amp;w=640 640w, /.netlify/images?url=/images/actualites/adhesion.jpg&amp;fm=avif&amp;w=960 960w, /.netlify/images?url=/images/actualites/adhesion.jpg&amp;fm=avif&amp;w=1280 1280w, /.netlify/images?url=/images/actualites/adhesion.jpg&amp;fm=avif&amp;w=1600 1600w" sizes="(min-width: 1248px) 1200px, (min-width: 601px) calc(100vw - 48px), calc(95vw - 40px)">
+                            <img src="/images/actualites/adhesion.jpg" srcset="/.netlify/images?url=/images/actualites/adhesion.jpg&amp;w=320 320w, /.netlify/images?url=/images/actualites/adhesion.jpg&amp;w=640 640w, /.netlify/images?url=/images/actualites/adhesion.jpg&amp;w=960 960w, /.netlify/images?url=/images/actualites/adhesion.jpg&amp;w=1280 1280w, /.netlify/images?url=/images/actualites/adhesion.jpg&amp;w=1600 1600w" sizes="(min-width: 1248px) 1200px, (min-width: 601px) calc(100vw - 48px), calc(95vw - 40px)" width="1600" height="1200" alt="Nageurs et plongeurs dans la piscine de Migennes" fetchpriority="high" decoding="async">
+                        </picture>
                         <h3>Inscriptions 2026/2027</h3>
                         <p>Les inscriptions pour la saison 2026/2027 sont ouvertes.<br><a href="./adhesion.html">Prendre une adhésion</a></p>
                     </div>
@@ -71,12 +83,18 @@
             </section>
 
             <!-- Planning -->
-            <section class="planning">
+            <section class="planning" id="scroll-planning">
                 <div class="top">
-                    <h2>Planning du club</h2>
-                    <a href="./adhesion.html">S'inscrire</a>
+                    <h2 id="planning-title">Planning du club</h2>
+                    <button class="planning-toggle" type="button" aria-label="Afficher l'agenda du club" aria-controls="club-planning club-agenda" title="Afficher l'agenda du club">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <rect x="3" y="5" width="18" height="16" rx="2"></rect>
+                            <path d="M16 3v4M8 3v4M3 10h18M8 14h3M8 17h3M15 14h2M15 17h2"></path>
+                        </svg>
+                    </button>
                 </div>
-                <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FParis&showPrint=0&mode=AGENDA&showTz=0&showCalendars=0&showTabs=0&showDate=0&showNav=0&showTitle=0&src=bWlnZW5uZXMuc3ViYXF1YXRpcXVlQGdtYWlsLmNvbQ&color=%239e69af" style="border-width:0" width="100%" height="300" frameborder="0" scrolling="no" title="Planning de Migennes Subaquatique" loading="lazy"></iframe>
+                <iframe id="club-planning" src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FParis&showPrint=0&mode=AGENDA&showTz=0&showCalendars=0&showTabs=0&showDate=0&showNav=0&showTitle=0&src=bWlnZW5uZXMuc3ViYXF1YXRpcXVlQGdtYWlsLmNvbQ&color=%239e69af" style="border-width:0" width="100%" height="300" frameborder="0" scrolling="no" title="Planning de Migennes Subaquatique" loading="lazy"></iframe>
+                <iframe id="club-agenda" src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=2&amp;ctz=Europe%2FParis&amp;showPrint=0&amp;mode=MONTH&amp;showTz=0&amp;showCalendars=0&amp;showTabs=0&amp;src=bWlnZW5uZXMuc3ViYXF1YXRpcXVlQGdtYWlsLmNvbQ&amp;color=%239e69af" style="border-width:0" width="100%" height="300" frameborder="0" scrolling="no" title="Agenda de Migennes Subaquatique" loading="lazy" hidden></iframe>
             </section>
 
             <!-- Moniteurs -->
@@ -86,8 +104,8 @@
                 <ul class="list">
                     <li class="moniteur">
                         <picture>
-                            <source type="image/avif" srcset="/.netlify/images?url=/images/persons/elyes.jpeg&amp;fm=avif&amp;w=100 100w, /.netlify/images?url=/images/persons/elyes.jpeg&amp;fm=avif&amp;w=200 200w, /.netlify/images?url=/images/persons/elyes.jpeg&amp;fm=avif&amp;w=300 300w" sizes="100px">
-                            <img src="/images/persons/elyes.jpeg" srcset="/.netlify/images?url=/images/persons/elyes.jpeg&amp;w=100 100w, /.netlify/images?url=/images/persons/elyes.jpeg&amp;w=200 200w, /.netlify/images?url=/images/persons/elyes.jpeg&amp;w=300 300w" sizes="100px" width="874" height="874" alt="Un moniteur de plongée de Migennes Subaquatique" loading="lazy" decoding="async">
+                            <source type="image/avif" srcset="/.netlify/images?url=/images/persons/elyes.jpg&amp;fm=avif&amp;w=100 100w, /.netlify/images?url=/images/persons/elyes.jpg&amp;fm=avif&amp;w=200 200w, /.netlify/images?url=/images/persons/elyes.jpg&amp;fm=avif&amp;w=300 300w" sizes="100px">
+                            <img src="/images/persons/elyes.jpg" srcset="/.netlify/images?url=/images/persons/elyes.jpg&amp;w=100 100w, /.netlify/images?url=/images/persons/elyes.jpg&amp;w=200 200w, /.netlify/images?url=/images/persons/elyes.jpg&amp;w=300 300w" sizes="100px" width="874" height="874" alt="Un moniteur de plongée de Migennes Subaquatique" loading="lazy" decoding="async">
                         </picture>
                         <h3>Elyes</h3>
                         <p>E4 MF2</p>
@@ -102,8 +120,8 @@
                     </li>
                     <li class="moniteur">
                         <picture>
-                            <source type="image/avif" srcset="/.netlify/images?url=/images/persons/laurent.jpeg&amp;fm=avif&amp;w=100 100w, /.netlify/images?url=/images/persons/laurent.jpeg&amp;fm=avif&amp;w=200 200w, /.netlify/images?url=/images/persons/laurent.jpeg&amp;fm=avif&amp;w=300 300w" sizes="100px">
-                            <img src="/images/persons/laurent.jpeg" srcset="/.netlify/images?url=/images/persons/laurent.jpeg&amp;w=100 100w, /.netlify/images?url=/images/persons/laurent.jpeg&amp;w=200 200w, /.netlify/images?url=/images/persons/laurent.jpeg&amp;w=300 300w" sizes="100px" width="822" height="822" alt="Un moniteur de plongée de Migennes Subaquatique" loading="lazy" decoding="async">
+                            <source type="image/avif" srcset="/.netlify/images?url=/images/persons/laurent.jpg&amp;fm=avif&amp;w=100 100w, /.netlify/images?url=/images/persons/laurent.jpg&amp;fm=avif&amp;w=200 200w, /.netlify/images?url=/images/persons/laurent.jpg&amp;fm=avif&amp;w=300 300w" sizes="100px">
+                            <img src="/images/persons/laurent.jpg" srcset="/.netlify/images?url=/images/persons/laurent.jpg&amp;w=100 100w, /.netlify/images?url=/images/persons/laurent.jpg&amp;w=200 200w, /.netlify/images?url=/images/persons/laurent.jpg&amp;w=300 300w" sizes="100px" width="822" height="822" alt="Un moniteur de plongée de Migennes Subaquatique" loading="lazy" decoding="async">
                         </picture>
                         <h3>Laurent</h3>
                         <p>E2 N5</p>
@@ -126,8 +144,8 @@
                     </li>
                     <li class="moniteur">
                         <picture>
-                            <source type="image/avif" srcset="/.netlify/images?url=/images/persons/marcelino.jpeg&amp;fm=avif&amp;w=100 100w, /.netlify/images?url=/images/persons/marcelino.jpeg&amp;fm=avif&amp;w=200 200w, /.netlify/images?url=/images/persons/marcelino.jpeg&amp;fm=avif&amp;w=300 300w" sizes="100px">
-                            <img src="/images/persons/marcelino.jpeg" srcset="/.netlify/images?url=/images/persons/marcelino.jpeg&amp;w=100 100w, /.netlify/images?url=/images/persons/marcelino.jpeg&amp;w=200 200w, /.netlify/images?url=/images/persons/marcelino.jpeg&amp;w=300 300w" sizes="100px" width="379" height="379" alt="Un moniteur de plongée de Migennes Subaquatique" loading="lazy" decoding="async">
+                            <source type="image/avif" srcset="/.netlify/images?url=/images/persons/marcelino.jpg&amp;fm=avif&amp;w=100 100w, /.netlify/images?url=/images/persons/marcelino.jpg&amp;fm=avif&amp;w=200 200w, /.netlify/images?url=/images/persons/marcelino.jpg&amp;fm=avif&amp;w=300 300w" sizes="100px">
+                            <img src="/images/persons/marcelino.jpg" srcset="/.netlify/images?url=/images/persons/marcelino.jpg&amp;w=100 100w, /.netlify/images?url=/images/persons/marcelino.jpg&amp;w=200 200w, /.netlify/images?url=/images/persons/marcelino.jpg&amp;w=300 300w" sizes="100px" width="379" height="379" alt="Un moniteur de plongée de Migennes Subaquatique" loading="lazy" decoding="async">
                         </picture>
                         <h3>Marcelino</h3>
                         <p>E1 EH1</p>
@@ -142,8 +160,8 @@
                     </li>
                     <li class="moniteur">
                         <picture>
-                            <source type="image/avif" srcset="/.netlify/images?url=/images/persons/christian.jpeg&amp;fm=avif&amp;w=100 100w, /.netlify/images?url=/images/persons/christian.jpeg&amp;fm=avif&amp;w=200 200w, /.netlify/images?url=/images/persons/christian.jpeg&amp;fm=avif&amp;w=300 300w" sizes="100px">
-                            <img src="/images/persons/christian.jpeg" srcset="/.netlify/images?url=/images/persons/christian.jpeg&amp;w=100 100w, /.netlify/images?url=/images/persons/christian.jpeg&amp;w=200 200w, /.netlify/images?url=/images/persons/christian.jpeg&amp;w=300 300w" sizes="100px" width="1459" height="1459" alt="Un moniteur de plongée de Migennes Subaquatique" loading="lazy" decoding="async">
+                            <source type="image/avif" srcset="/.netlify/images?url=/images/persons/christian.jpg&amp;fm=avif&amp;w=100 100w, /.netlify/images?url=/images/persons/christian.jpg&amp;fm=avif&amp;w=200 200w, /.netlify/images?url=/images/persons/christian.jpg&amp;fm=avif&amp;w=300 300w" sizes="100px">
+                            <img src="/images/persons/christian.jpg" srcset="/.netlify/images?url=/images/persons/christian.jpg&amp;w=100 100w, /.netlify/images?url=/images/persons/christian.jpg&amp;w=200 200w, /.netlify/images?url=/images/persons/christian.jpg&amp;w=300 300w" sizes="100px" width="1459" height="1459" alt="Un moniteur de plongée de Migennes Subaquatique" loading="lazy" decoding="async">
                         </picture>
                         <h3>Christian</h3>
                         <p>E1</p>
@@ -167,6 +185,6 @@
         <div class="top-page-button" id="top-page-button"></div>
 
         <!-- Footer -->
-        <footer id="footer"></footer>
+        <div id="footer"></div>
     </body>
 </html>

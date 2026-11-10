@@ -6,6 +6,7 @@
 <title>Adhésion | Migennes Subaquatique</title>
 <meta name="description" content="Rejoignez Migennes Subaquatique et retrouvez les options d'adhésion ainsi que les documents nécessaires." />
 <link rel="shortcut icon" href="https://img.icons8.com/?size=100&id=cSBMHDeqDYbh&format=png&color=22C3E6" type="image/x-icon">
+<link rel="preload" as="image" type="image/avif" imagesrcset="/.netlify/images?url=/images/img-adhesion.jpg&amp;fm=avif&amp;w=320 320w, /.netlify/images?url=/images/img-adhesion.jpg&amp;fm=avif&amp;w=640 640w, /.netlify/images?url=/images/img-adhesion.jpg&amp;fm=avif&amp;w=960 960w, /.netlify/images?url=/images/img-adhesion.jpg&amp;fm=avif&amp;w=1280 1280w, /.netlify/images?url=/images/img-adhesion.jpg&amp;fm=avif&amp;w=1600 1600w, /.netlify/images?url=/images/img-adhesion.jpg&amp;fm=avif&amp;w=2048 2048w" imagesizes="(min-width: 1232px) 1200px, (min-width: 601px) calc(100vw - 48px), calc(100vw - 32px)" fetchpriority="high">
 <script src="import-header-footer.js" defer></script>
 <script src="image-fallback.js" defer></script>
 <script src="menu-burger.js" defer></script>
@@ -16,19 +17,25 @@
 <link rel="stylesheet" href="top-page-button.css">
 <link rel="stylesheet" href="footer.css">
 </head>
-<body id="top-page">
+<body data-current-page="adhesion" id="top-page">
+    <a class="skip-link" href="#main-content">Aller au contenu principal</a>
     <!-- Header -->
     <header class="header" id="header"></header>
 
     <!-- Main -->
-    <main class="site-main membership-main">
-        <!-- Titre principal -->
-        <div class="page-heading">
-            <div class="title">
-                <span>Prendre une adhésion chez</span>
-                <h1>Migennes Subaquatique</h1>
+    <main class="site-main membership-main" id="main-content" tabindex="-1">
+        <section class="membership-hero">
+            <picture class="membership-hero-image">
+                <source type="image/avif" srcset="/.netlify/images?url=/images/img-adhesion.jpg&amp;fm=avif&amp;w=320 320w, /.netlify/images?url=/images/img-adhesion.jpg&amp;fm=avif&amp;w=640 640w, /.netlify/images?url=/images/img-adhesion.jpg&amp;fm=avif&amp;w=960 960w, /.netlify/images?url=/images/img-adhesion.jpg&amp;fm=avif&amp;w=1280 1280w, /.netlify/images?url=/images/img-adhesion.jpg&amp;fm=avif&amp;w=1600 1600w, /.netlify/images?url=/images/img-adhesion.jpg&amp;fm=avif&amp;w=2048 2048w" sizes="(min-width: 1232px) 1200px, (min-width: 601px) calc(100vw - 48px), calc(100vw - 32px)">
+                <img src="/images/img-adhesion.jpg" srcset="/.netlify/images?url=/images/img-adhesion.jpg&amp;w=320 320w, /.netlify/images?url=/images/img-adhesion.jpg&amp;w=640 640w, /.netlify/images?url=/images/img-adhesion.jpg&amp;w=960 960w, /.netlify/images?url=/images/img-adhesion.jpg&amp;w=1280 1280w, /.netlify/images?url=/images/img-adhesion.jpg&amp;w=1600 1600w, /.netlify/images?url=/images/img-adhesion.jpg&amp;w=2048 2048w" sizes="(min-width: 1232px) 1200px, (min-width: 601px) calc(100vw - 48px), calc(100vw - 32px)" width="2048" height="888" alt="Les adhérents de Migennes Subaquatique réunis sur un bateau de plongée" fetchpriority="high" decoding="async">
+            </picture>
+            <div class="page-heading">
+                <div class="title">
+                    <span>Prendre une adhésion chez</span>
+                    <h1>Migennes Subaquatique</h1>
+                </div>
             </div>
-        </div>
+        </section>
 
         <!-- Choix helloasso ou formulaire pour adhésion -->
         <div class="membership-options">
@@ -41,11 +48,6 @@
                 <a href="adhesion-form.html">Inscription et paiement par autre moyen</a>
             </div>
         </div>
-        <picture class="membership-hero">
-            <source type="image/avif" srcset="/.netlify/images?url=/images/img-adhesion.jpeg&amp;fm=avif&amp;w=320 320w, /.netlify/images?url=/images/img-adhesion.jpeg&amp;fm=avif&amp;w=640 640w, /.netlify/images?url=/images/img-adhesion.jpeg&amp;fm=avif&amp;w=960 960w, /.netlify/images?url=/images/img-adhesion.jpeg&amp;fm=avif&amp;w=1280 1280w, /.netlify/images?url=/images/img-adhesion.jpeg&amp;fm=avif&amp;w=1600 1600w, /.netlify/images?url=/images/img-adhesion.jpeg&amp;fm=avif&amp;w=2048 2048w" sizes="(min-width: 90rem) 1100px, 80vw">
-            <img src="/images/img-adhesion.jpeg" srcset="/.netlify/images?url=/images/img-adhesion.jpeg&amp;w=320 320w, /.netlify/images?url=/images/img-adhesion.jpeg&amp;w=640 640w, /.netlify/images?url=/images/img-adhesion.jpeg&amp;w=960 960w, /.netlify/images?url=/images/img-adhesion.jpeg&amp;w=1280 1280w, /.netlify/images?url=/images/img-adhesion.jpeg&amp;w=1600 1600w, /.netlify/images?url=/images/img-adhesion.jpeg&amp;w=2048 2048w" sizes="(min-width: 90rem) 1100px, 80vw" width="2048" height="888" loading="lazy" decoding="async">
-        </picture>
-
         <!-- Documents -->
         <section class="content-panel documents-list" aria-label="Documents d'adhésion">
             <h2>Documents pour l'adhésion</h2>
@@ -73,6 +75,6 @@
     <div class="top-page-button" id="top-page-button"></div>
 
     <!-- Footer -->
-    <footer id="footer"></footer>
+    <div id="footer"></div>
 </body>
 </html>

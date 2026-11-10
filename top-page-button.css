@@ -4,6 +4,7 @@
     right: 3vw;
     z-index: 1000;
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
     background-color: var(--color-aqua-500);
     border-radius: 999px;
@@ -14,6 +15,7 @@
 .top-page-button-control.active,
 .top-page-button-control.opacity-85 {
     opacity: 0.85;
+    visibility: visible;
     pointer-events: auto;
 }
 
@@ -25,9 +27,4 @@
     display: block;
     width: 48px;
     height: 48px;
-}
-
-.top-page-button-control a:focus-visible {
-    outline: 3px solid #06b6d4;
-    outline-offset: 3px;
 }

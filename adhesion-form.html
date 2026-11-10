@@ -16,11 +16,12 @@
 <link rel="stylesheet" href="top-page-button.css">
 <link rel="stylesheet" href="footer.css">
 </head>
-<body class="adhesion-form-page" id="top-page">
+<body class="adhesion-form-page" data-current-page="adhesion" id="top-page">
+    <a class="skip-link" href="#main-content">Aller au contenu principal</a>
     <header class="header" id="header"></header>
 
     <!-- Main -->
-    <main class="site-main membership-form-main">
+    <main class="site-main membership-form-main" id="main-content" tabindex="-1">
         <!-- Titre principal -->
         <div class="page-heading">
             <div class="title">
@@ -32,7 +33,7 @@
         <!-- Formulaire Adhésion -->
         <div>
             <form class="membership-form" name="adhesion" netlify>
-                <p class="form-heading">Vos informations</p>
+                <h2 class="form-heading">Vos informations</h2>
                 <div class="form-row">
                     <div class="form-field">
                         <label class="form-label" for="prenom">PRÉNOM *</label>
@@ -219,6 +220,6 @@
         </div>
     </main>
     <div class="top-page-button" id="top-page-button"></div>
-    <footer id="footer"></footer>
+    <div id="footer"></div>
 </body>
 </html>

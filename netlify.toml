@@ -1,5 +1,11 @@
 [images]
-remote_images = ['https://www\.salon-de-la-plongee\.com/files/news/25698_salon_plongee_2027_banniere_700x700px_site_salon\.jpg']
+remote_images = [
+  'https://www\.salon-de-la-plongee\.com/files/news/25698_salon_plongee_2027_banniere_700x700px_site_salon\.jpg',
+  '^https://img\.icons8\.com/\?size=100&id=85500&format=png&color=FFFFFF$',
+  '^https://img\.icons8\.com/\?size=100&id=118489&format=png&color=228BE6$',
+  '^https://img\.icons8\.com/\?size=100&id=Xy10Jcu1L2Su&format=png&color=000000$',
+  '^https://image\.jimcdn\.com/app/cms/image/transf/dimension=250x10000:format=jpg/path/s6d486fb56e4e94d7/image/i7a468b6f305439f4/version/1751204905/image\.jpg$',
+]
 
 [[headers]]
 for = "/images/*"

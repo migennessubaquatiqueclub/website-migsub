@@ -7,6 +7,7 @@
 
 .shop-item {
     display: flex;
+    min-width: 0;
     flex-direction: column;
     padding: 16px;
     border: 1px solid var(--color-sky-200);
@@ -19,6 +20,10 @@
     width: 100%;
     height: auto;
     border-radius: 8px;
+}
+
+.shop-item picture {
+    display: block;
 }
 
 .shop-item h2 {
@@ -36,6 +41,9 @@
 .shop-item .order-link {
     align-self: flex-start;
     margin-top: 16px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
     padding: 10px 16px;
     border-radius: 7px;
     background-color: var(--color-ocean-800);
@@ -44,6 +52,19 @@
     text-decoration: none;
 }
 
-.shop-item .order-link:hover {
-    background-color: var(--color-ocean-950);
+@media (min-width: 601px) {
+    .shop-main .shop-items {
+        width: 100%;
+        max-width: 820px;
+        align-self: center;
+    }
+
+    .shop-item img {
+        aspect-ratio: 1;
+        object-fit: contain;
+    }
+
+    .shop-item .order-link {
+        margin-top: auto;
+    }
 }
